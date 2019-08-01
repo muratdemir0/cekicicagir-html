@@ -1,0 +1,93 @@
+// Layout Style
+
+//Navbar
+.navbar{
+  background-color: transparent;
+  padding: 1rem 8.571rem;
+  @include xxl{
+    padding: 1rem 8.571rem 1rem 7.142rem;
+  }
+  @include md{
+    padding: 0;
+    background-color: $background;
+  }
+  .nav-link{
+    color: $primary-font-color;
+    transition: all .3s ease;
+    padding-right: 1.285rem;
+    padding-left: 1.285rem;
+    &:hover{
+      color: $green;
+    }
+    &.active{
+      color: $green;
+      font-weight: 600;
+      position: relative;
+      padding: 0.5rem 30px;
+      span{
+        &:first-child{
+          display: inline-block;
+          margin-right: 5px;
+          img{
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+      &:hover{
+        border: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+  .navbar-collapse{
+    padding-right: 20px;
+  }
+}
+section{
+  padding: 100px 0;
+  @include md{
+    padding: 50px 0;
+  }
+  &:first-child{
+    @include md{
+      padding-top: 0;
+    }
+  }
+}
+
+h2{
+  margin-bottom: 50px;
+  font-size: 2.428rem;
+  font-weight: 600;
+  color: $alternative-font-color;
+  @include md{
+    margin-bottom: 45px;
+    padding: 0 60px 0 30px;
+    font-size: 1.428rem;
+  }
+}
+main{
+  .jumbotron{
+    padding: 10.428rem 2rem;
+    background-color: $background;
+    @include md{
+      padding: 0 2rem;
+    }
+   form{
+    box-shadow: 0 1px 5px 0 rgba(33, 33, 33, 0.15);
+   }
+   h1{
+     line-height: 1.26;
+     font-weight: 600;
+     font-size: 3.857rem;
+     margin-bottom: 36px;
+     color: $alternative-font-color;
+     @include md {
+      font-size: 2.285rem;
+      margin-top: 20px;
+    }
+   }
+  }
+}
