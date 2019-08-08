@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="202" viewBox="0 0 320 202">
+    <g fill="none" fill-rule="evenodd" transform="translate(0 -52)">
+        <path fill="#F5F5F5" d="M78 155h14v94H78z"/>
+        <path stroke="#BDBDBD" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M0 248h78l-1-94h75V63h84v82h10v-43l12-14h34l14 14v146h32V40h20V21h42v19h24v205h22"/>
+        <path fill="#F5F5F5" d="M182 76h11.12v30H182zM197.88 76H209v30h-11.12zM273 120h11.12v30H273zM247 103h14v145h-14zM153 64h14v184h-14zM288.88 120H300v30h-11.12zM273 161h11.12v30H273zM288.88 161H300v30h-11.12zM273 203h11.12v30H273zM288.88 203H300v30h-11.12zM219 99h8v24h-8zM219 148h8v24h-8zM219 192h8v24h-8zM182 123h11.12v30H182zM197.88 123H209v30h-11.12zM182 167h11.12v30H182zM197.88 167H209v30h-11.12zM118.8 167H130v30h-11.2zM98 167h11.2v30H98zM134.8 167H146v30h-11.2zM118.8 211H130v30h-11.2zM98 211h11.2v30H98zM134.8 211H146v30h-11.2zM182 208h11.12v30H182zM197.88 208H209v30h-11.12z"/>
+        <path stroke="#BDBDBD" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M276 88V53"/>
+        <path fill="#F5F5F5" stroke="#BDBDBD" stroke-width="2" d="M42.91 227.08c-10.493 0-19-8.507-19-19 0 0 7.85-55.18 17.45-55.18h3c9.6 0 17.45 55.18 17.45 55.18 0 10.454-8.446 18.945-18.9 19z"/>
+        <path stroke="#BDBDBD" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M43.29 247v-37.12"/>
+        <rect width="45.51" height="63.35" x="137.43" y="147.93" fill="#F5F5F5" stroke="#BDBDBD" stroke-width="2" rx="18.98"/>
+        <path stroke="#BDBDBD" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M160.43 252.57v-59.13"/>
+    </g>
+</svg>

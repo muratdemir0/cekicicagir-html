@@ -19,4 +19,12 @@ $("document").ready(function () {
     $('.navbar-brand').toggleClass('hide');
     $('.navbar-brand .logo-mobile').toggleClass('hide');
   });
+  $(window).scroll(function(){
+    var scroll = $(window).scrollTop();
+    if(scroll < 100){
+        $('.fixed-top').removeClass('sticky');
+    } else{
+        $('.fixed-top').addClass('sticky');
+    }
+});
 });

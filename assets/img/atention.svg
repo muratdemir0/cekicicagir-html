@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="180" viewBox="0 0 180 180">
+    <defs>
+        <path id="a" d="M54 0l54 128H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#F5F5F5" fill-rule="nonzero" d="M86 18h8a5 5 0 0 1 5 5v1a6 6 0 0 1-6 6h-6a6 6 0 0 1-6-6v-1a5 5 0 0 1 5-5z"/>
+        <g transform="translate(36 18)">
+            <mask id="b" fill="#fff">
+                <use xlink:href="#a"/>
+            </mask>
+            <use fill="#F5F5F5" fill-rule="nonzero" xlink:href="#a"/>
+            <path fill="#22A7A7" fill-rule="nonzero" d="M83 71c-52.467 0-95-42.533-95-95s42.533-95 95-95 95 42.533 95 95-42.533 95-95 95zm1-26c38.66 0 70-31.34 70-70s-31.34-70-70-70-70 31.34-70 70 31.34 70 70 70z" mask="url(#b)"/>
+            <path fill="#22A7A7" fill-rule="nonzero" d="M70 125c-52.467 0-95-42.533-95-95s42.533-95 95-95 95 42.533 95 95-42.533 95-95 95zm1-26c38.66 0 70-31.34 70-70s-31.34-70-70-70S1-9.66 1 29s31.34 70 70 70z" mask="url(#b)"/>
+        </g>
+        <path fill="#F5F5F5" fill-rule="nonzero" d="M39 144h102c7.18 0 13 5.82 13 13H26c0-7.18 5.82-13 13-13z"/>
+        <path fill-rule="nonzero" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M81 39.873c-13.39 33.64-30.985 63.553-40.792 98.367M84.56 30.699c-15.28-14.921 21.809-17.622 11.613-3.02"/>
+        <path fill-rule="nonzero" stroke="#000" stroke-linecap="round" stroke-width="2" d="M96.334 33.63c5.33 12.631 10.225 25.455 15.99 37.895 1.377 2.972 4.208 5.163 5.381 8.221 4.828 12.587 7.256 26.9 12.523 38.454 10.33 22.658 10.33 20.428 12.964 25.52"/>
+        <path fill-rule="nonzero" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M36.82 146.068c-4.579.718-17.94 10.887-6.438 11.45 21.376 1.044 42.77 2.164 64.172 2.061 20.833-.1 39.159-4.966 59.776-.095"/>
+        <path fill-rule="nonzero" stroke="#000" stroke-linecap="round" stroke-width="2" d="M81.646 52.87c10.31 6.47 16.413 7.934 25.84 9.677M66.464 73.452c24.116 15.085 25.53 11.333 48.232 15.598M57.304 97.181c24.646 16.074 39.66 25.373 69.558 19.041M60.186 131.579c23.219 10.264 50.692 16.855 75.531 7.215"/>
+    </g>
+</svg>

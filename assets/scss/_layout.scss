@@ -30,8 +30,8 @@
           margin-right: 5px;
           img{
             position: absolute;
-            top: 0;
-            left: 0;
+            top: -4px;
+            left: 4px;
           }
         }
       }
@@ -69,8 +69,13 @@ h2{
   }
 }
 main{
+  section{
+    padding-top: 0;
+    padding-bottom: 25px;
+  }
   .jumbotron{
-    padding: 10.428rem 2rem;
+    max-width: 768px;
+    padding: 125px 0 100px 0;
     background-color: $background;
     @include md{
       padding: 0 2rem;

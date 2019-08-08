@@ -10650,8 +10650,8 @@ ul {
 
 .navbar .nav-link.active span:first-child img {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -4px;
+  left: 4px;
 }
 
 .navbar .nav-link.active:hover {
@@ -10694,8 +10694,14 @@ h2 {
   }
 }
 
+main section {
+  padding-top: 0;
+  padding-bottom: 25px;
+}
+
 main .jumbotron {
-  padding: 10.428rem 2rem;
+  max-width: 768px;
+  padding: 125px 0 100px 0;
   background-color: #f9f9f9;
 }
 
@@ -10813,6 +10819,47 @@ main .jumbotron h1 {
   color: #0a9ac9;
 }
 
+.select2-dropdown {
+  border: 0;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+}
+
+.select2-results {
+  padding: 10px;
+}
+
+.select2-container--default .select2-selection--single {
+  width: 100%;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  height: 45px;
+  line-height: 45px;
+  color: #616161;
+  border-color: #f5f5f5;
+  padding: 0 10px;
+  text-align: left;
+  position: relative;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  line-height: normal !important;
+  height: 100%;
+  font-size: 1.142rem;
+}
+
+.jumbotron {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
 .jumbotron .filter-wrap {
   max-width: 768px;
   background-color: #ffffff;
@@ -10835,6 +10882,29 @@ main .jumbotron h1 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+.jumbotron .filter-wrap .select2-container {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  margin-right: 12px;
+  position: relative;
+}
+
+.jumbotron .filter-wrap .select2-container:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 24px;
+  color: #0a9ac9;
+}
+
+.jumbotron .filter-wrap .select2-container--default .select2-selection--single .select2-selection__arrow {
+  display: none;
 }
 
 .jumbotron .filter-wrap .dropdown {
@@ -10899,8 +10969,21 @@ main .jumbotron h1 {
   background-color: #f5f5f5;
 }
 
+.jumbotron .filter-wrap .btn-primary {
+  position: relative;
+  padding-left: 35px;
+}
+
+.jumbotron .filter-wrap .btn-primary .icon {
+  position: absolute;
+  left: 9px;
+  top: 7px;
+}
+
 .jumbotron .filter-wrap button {
   height: 100%;
+  white-space: nowrap;
+  font-size: 16px;
 }
 
 @media (max-width: 768px) {
@@ -10930,8 +11013,16 @@ main .jumbotron h1 {
 
 @media (max-width: 768px) {
   .navbar {
-    background-color: #ffffff;
+    background-color: #f9f9f9;
   }
+}
+
+.navbar.sticky {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 @media (max-width: 768px) {
@@ -10983,11 +11074,14 @@ main .jumbotron h1 {
 }
 
 .navbar-toggler {
-  margin: 1em;
-  width: 40px;
+  margin: 10px 0;
   position: absolute;
   right: 0;
   top: 0;
+}
+
+.navbar-toggler:focus {
+  outline: none;
 }
 
 .navbar-toggler:after, .navbar-toggler:before,
@@ -11000,6 +11094,11 @@ main .jumbotron h1 {
   margin: 7px 0;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  width: 25px;
+}
+
+.navbar-toggler span {
+  width: 35px;
 }
 
 .navbar-toggler.toggle:after {
@@ -11054,8 +11153,24 @@ section.intro {
 
 #how-it-works {
   width: 100%;
+  padding-top: 0;
+}
+
+#how-it-works .wrapper {
+  background-color: #ffffff;
+}
+
+#how-it-works .wrapper-center {
   max-width: 1120px;
   margin: 0 auto;
+  position: relative;
+  top: -120px;
+}
+
+@media (max-width: 768px) {
+  #how-it-works .wrapper-center {
+    top: 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -11067,6 +11182,7 @@ section.intro {
 #how-it-works h2 {
   margin-bottom: 50px;
   color: #212121;
+  font-weight: normal;
 }
 
 #how-it-works ul {
@@ -11236,6 +11352,13 @@ section.intro {
   font-size: 1.142rem;
 }
 
+.carousel-indicators li {
+  background-color: #0a9ac9;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
 #carousel .carousel {
   width: 635px;
   border-radius: 3px;
@@ -11248,13 +11371,6 @@ section.intro {
   #carousel .carousel {
     width: 85%;
   }
-}
-
-#carousel .carousel .carousel-indicators li {
-  background-color: #0a9ac9;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
 }
 
 #carousel .carousel .carousel-item {
@@ -11322,7 +11438,7 @@ section.intro {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 100px 120px;
+  padding: 0 120px 100px 120px;
   margin: 0;
 }
 
@@ -11349,7 +11465,7 @@ section.intro {
   .img-with-text p {
     font-size: 1.428rem;
     padding: 0 15px;
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -11361,7 +11477,12 @@ section.intro {
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
-  background-size: cover;
+  padding: 0;
+}
+
+#services .services-wrap {
+  position: relative;
+  top: -150px;
 }
 
 #services h2 {
@@ -11374,12 +11495,50 @@ section.intro {
   }
 }
 
+#services .service-mobile {
+  margin: 0 24px;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #services .service-mobile {
+    display: block;
+  }
+}
+
+#services .service-mobile .carousel-indicators {
+  bottom: -50px;
+}
+
+#services .service-mobile .carousel-inner .carousel-item img {
+  margin-bottom: 24px;
+  height: 50px;
+}
+
+#services .service-mobile .carousel-inner .carousel-item h5 {
+  color: #616161;
+  line-height: 1.57;
+  font-size: 1.285rem;
+  font-weight: 600;
+}
+
+#services .service-mobile .carousel-inner .carousel-item p {
+  color: #bdbdbd;
+  line-height: 1.57;
+}
+
 #services .service-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  #services .service-wrap.desktop {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -11555,7 +11714,7 @@ footer .foo-menu ul li a:hover {
 
 .navbar-toggler-icon {
   position: relative;
-  left: -15px;
+  left: -10px;
 }
 
 #detail {
@@ -11574,6 +11733,12 @@ footer .foo-menu ul li a:hover {
   margin: 0 auto;
   position: relative;
   top: -200px;
+}
+
+@media (max-width: 768px) {
+  #detail .detail-wrap {
+    top: 0;
+  }
 }
 
 #detail .text,

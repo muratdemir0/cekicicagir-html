@@ -78,8 +78,36 @@
     color: $blue;
   }
 }
-
+.select2-dropdown{
+  border: 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+}
+.select2-results{
+  padding: 10px;
+}
+.select2-container--default .select2-selection--single{
+  width: 100%;
+  background-color: $highlight;
+  border-radius: 3px;
+  height: 45px;
+  line-height: 45px;
+  color: $primary-font-color;
+  border-color: $highlight;
+  padding: 0 10px;
+  text-align: left;
+  position: relative;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+  display: flex;
+  align-items: center;
+  padding: 0;
+  line-height: normal!important;
+  height: 100%;
+  font-size: 1.142rem;
+}
 .jumbotron {
+  max-width: 768px;
+  margin: 0 auto;
   .filter-wrap {
     max-width: 768px;
     background-color: $white;
@@ -91,6 +119,24 @@
     @include md{
       flex-direction: column;
 
+    }
+    .select2-container{
+      flex-basis: 50%;
+      margin-right: 12px;
+      position: relative;
+      &:after{
+        content: "\f107";
+        font-family: FontAwesome;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+        color: $blue;
+      }
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow{
+      display: none;
     }
     .dropdown{
       margin-right: 24px;
@@ -139,9 +185,19 @@
         }
       }
     }
-
+    .btn-primary{
+      position: relative;
+      padding-left: 35px;
+      .icon{
+        position: absolute;
+        left: 9px;
+        top: 7px;
+      }
+    }
     button {
       height: 100%;
+      white-space: nowrap;
+      font-size: 16px;
       @include md{
         margin-top: 12px;
         width: 100%;
@@ -149,7 +205,6 @@
     }
   }
 }
-
 .form-side-by-side {
   display: flex;
 
@@ -168,7 +223,12 @@
 //Logo
 .navbar{
   @include md{
-    background-color: $white;
+    background-color: $background;
+  }
+  &.sticky{
+    transition: all .5s ease;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   }
   .navbar-collapse{
     @include md{
@@ -227,11 +287,13 @@
   }
 }
 .navbar-toggler{
-  margin: 1em;
-  width: 40px;
+  margin: 10px 0;
   position: absolute;
   right: 0;
   top: 0;
+  &:focus{
+    outline: none;
+  }
   &:after,
   &:before,
   span{
@@ -242,6 +304,10 @@
     height: 5px;
     margin: 7px 0;
     transition: all .2s ease-in-out;
+    width: 25px;
+  }
+  span{
+    width: 35px;
   }
   &.toggle{
     &:after{
@@ -290,14 +356,26 @@ section{
 }
 #how-it-works{
   width: 100%;
-  max-width: 1120px;
-  margin: 0 auto;
+  padding-top: 0;
+  .wrapper{
+    background-color: $white;
+  }
+  .wrapper-center{
+    max-width: 1120px;
+    margin: 0 auto;
+    position: relative;
+    top: -120px;
+    @include md{
+      top: 0;
+    }
+  }
   @include md{
     padding-top: 0;
   }
   h2{
     margin-bottom: 50px;
     color: $alternative-font-color;
+    font-weight: normal;
   }
   ul{
     display: flex;
@@ -410,6 +488,14 @@ section{
 }
 
 //
+.carousel-indicators{
+  li{
+    background-color: $blue;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+}
 #carousel{
   .carousel{
     width: 635px;
@@ -418,14 +504,6 @@ section{
     margin: 40px auto;
     @include md{
       width: 85%;
-    }
-    .carousel-indicators{
-      li{
-        background-color: $blue;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-      }
     }
     .carousel-item{
       padding: 80px 100px;
@@ -476,7 +554,7 @@ section{
 .img-with-text{
   display: flex;
   align-items: center;
-  padding: 100px 120px;
+  padding: 0 120px 100px 120px;
   margin: 0;
   @include md{
     flex-direction: column;
@@ -492,7 +570,7 @@ section{
     @include md{
       font-size: 1.428rem;
       padding: 0 15px;
-      text-align: center;
+      text-align: left;
     }
   }
   img{
@@ -504,17 +582,53 @@ section{
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
-  //background: url('../img/service-bg.png') no-repeat center center;
-  background-size: cover;
+  padding: 0;
+  .services-wrap{
+    position: relative;
+    top: -150px;
+  }
   h2{
     margin-bottom: 90px;
     @include md{
       margin-bottom: 45px;
     }
   }
+  .service-mobile{
+    margin: 0 24px;
+    display:none;
+    @include md {
+      display: block;
+    }
+    .carousel-indicators{
+      bottom: -50px;
+    }
+    .carousel-inner{
+      .carousel-item{
+        img{
+          margin-bottom: 24px;
+          height: 50px;
+        }
+        h5{
+          color: #616161;
+          line-height: 1.57;
+          font-size: 1.285rem;
+          font-weight: 600;
+        }
+        p{
+          color: #bdbdbd;
+          line-height: 1.57;
+        }
+      }
+    }
+  }
   .service-wrap{
     display: flex;
     flex-wrap: wrap;
+    &.desktop{
+      @include md {
+        display: none;
+      }
+    }
     @include md{
       padding: 0 30px;
     }
@@ -646,7 +760,7 @@ footer{
 }
 .navbar-toggler-icon{
   position: relative;
-  left: -15px;
+  left: -10px;
 }
 #detail{
   background-color: $white;
@@ -659,6 +773,9 @@ footer{
     margin: 0 auto;
     position: relative;
     top: -200px;
+    @include md{
+      top: 0;
+    }
   }
   .text,
   .img{

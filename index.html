@@ -28,6 +28,7 @@
     <link rel="icon" href="assets/img/favicon.ico" />
     <link rel="manifest" href="assets/img//site.webmanifest" />
     <title>Çekici Çağır</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 
     <!-- Icons for this template -->
     <link
@@ -42,15 +43,15 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-md">
+    <nav class="navbar navbar-expand-md fixed-top">
       <a class="navbar-brand mobile" href="#">
         <img
-          src="assets/img/logo.png"
+          src="assets/img/logo.svg"
           srcset="assets/img/logo@2x.png 2x, assets/img/logo@2x.png 3x"
           alt=""
           class="logo-desktop"
         />
-        <img src="assets/img/logo-mini.png" class="logo-mobile" alt="" />
+        <img src="assets/img/logo-mini.svg" class="logo-mobile" alt="" />
       </a>
       <button
         class="navbar-toggler"
@@ -88,7 +89,7 @@
             <a class="nav-link active" href="#">
               <span>
                 <img
-                  src="assets/img/call-active.png"
+                  src="assets/img/call-active.svg"
                   class="img-fluid"
                   alt=""
                 />
@@ -97,7 +98,7 @@
             </a>
           </li>
           <button class="go-to-panel">
-            <img src="assets/img/phone.png" class="img-fluid" alt="" />
+            <img src="assets/img/phone.svg" class="img-fluid" alt="" />
             <span>
               Tedarikçi panelini indir</span>
             </span>
@@ -112,46 +113,22 @@
           <div class="jumbotron jumbotron-fluid text-center w-100">
             <h1>Nerede Kaldın?</h1>
             <div class="filter-wrap">
-              <div class="dropdown">
-                <button
-                  class="btn btn-secondary dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  İl Seçin
-                  <i class="fa fa-chevron-down"></i>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">İstanbul</a>
-                  <a class="dropdown-item" href="#">Ankara</a>
-                  <a class="dropdown-item" href="#">İzmir</a>
-                </div>
-              </div>
-              <div class="dropdown">
-                <button
-                  class="btn btn-secondary dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  İlçe Seçin
-                  <i class="fa fa-chevron-down"></i>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Beşiktaş</a>
-                  <a class="dropdown-item" href="#">Bahçelievler</a>
-                  <a class="dropdown-item" href="#">Karşıyaka</a>
-                </div>
-              </div>
+              <select class="form-control select2">
+                    <option>İl Seçin</option>
+                    <option>İstanbul</option>
+                    <option>Ankara</option>
+                    <option>İzmir</option>
+              </select>
+              <select class="form-control select2">
+                    <option>İlçe Seçin</option>
+                    <option>Beşiktaş</option>
+                    <option>Bahçelievler</option>
+                    <option>Göztepe</option>
+              </select>
               <div class="input-wrap button">
                 <button class="btn btn-primary">
                   <span class="icon">
-                    <img src="assets/img/call.png" class="img-fluid" alt="" />
+                    <img src="assets/img/call.svg" class="img-fluid" alt="" />
                   </span>
                   <span>
                     Çekici Çağır
@@ -164,11 +141,11 @@
         <div class="row">
           <div class="jumbotron-img text-center w-100">
             <img
-              src="assets/img/home-illustration.png"
+              src="assets/img/home-illustration.svg"
               class="img-fluid desktop-header-img"
               alt=""
             />
-            <img src="assets/img/home-car-mobile.png" class="mobile-header-img" alt="">
+            <img src="assets/img/home-car-mobile.svg" class="mobile-header-img" alt="">
           </div>
         </div>
       </section>
@@ -176,120 +153,177 @@
 
     <!-- how it works-->
     <section id="how-it-works">
-      <h2>Yolda kalınca ne yapmalısınız?</h2>
-      <ul>
-        <li>
-          <div class="img">
-            <img src="assets/img/atention.png" class="img-fluid" alt="" />
-          </div>
-          <p>Olası risklere karşı önlemini al</p>
-        </li>
-        <li>
-          <div class="arrow-down">
-            <img src="assets/img/arrow-down.png" class="img-fluid" alt="" />
-          </div>
-        </li>
-        <li>
-          <div class="img">
-            <img
-              src="assets/img/atention-button.png"
-              class="img-fluid"
-              alt=""
-            />
-          </div>
-          <p>Çekici Çağır butonuna tıkla, nerede kaldığını bildir</p>
-        </li>
-        <li>
-          <div class="arrow-down">
-            <img src="assets/img/arrow-down.png" class="img-fluid" alt="" />
-          </div>
-        </li>
-        <li>
-          <div class="img">
-            <img src="assets/img/tom.png" class="img-fluid" alt="" />
-          </div>
-          <p>Sigortalı çekicilerimiz hemen yardımınıza gelsin.</p>
-        </li>
-      </ul>
+      <div class="img">
+            <img src="/assets/img/top-wave.png" class="img-fluid wave" alt="">
+      </div>
+      <div class="wrapper">
+        <div class="wrapper-center">
+          <h2>Yolda kalınca ne yapmalısınız?</h2>
+        <ul>
+          <li>
+            <div class="img">
+              <img src="assets/img/atention.svg" class="img-fluid" alt="" />
+            </div>
+            <p>Olası risklere karşı önlemini al</p>
+          </li>
+          <li>
+            <div class="arrow-down">
+              <img src="assets/img/arrow-down.svg" class="img-fluid" alt="" />
+            </div>
+          </li>
+          <li>
+            <div class="img">
+              <img
+                src="assets/img/atention-button.svg"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <p>Çekici Çağır butonuna tıkla, nerede kaldığını bildir</p>
+          </li>
+          <li>
+            <div class="arrow-down">
+              <img src="assets/img/arrow-down.svg" class="img-fluid" alt="" />
+            </div>
+          </li>
+          <li>
+            <div class="img">
+              <img src="assets/img/tom.svg" class="img-fluid" alt="" />
+            </div>
+            <p>Sigortalı çekicilerimiz hemen yardımınıza gelsin.</p>
+          </li>
+        </ul>
+        </div>
+      </div>
+
+      <div class="img">
+          <img src="/assets/img/bottom-wave.png" class="img-fluid wave" alt="">
+        </div>
     </section>
     <!-- END how it works-->
 
     <!-- services -->
     <section id="services">
-      <h2>Sana hangi servisleri sağlayabiliriz?</h2>
-      <div class="service-wrap">
-        <div class="box">
-          <div class="icon">
-            <img src="assets/img/taxi.png" class="img-fluid" alt="" />
+        <div class="services-wrap">
+          <h2>Sana hangi servisleri sağlayabiliriz?</h2>
+        <div class="service-wrap desktop">
+          <div class="box">
+            <div class="icon">
+              <img src="assets/img/taxi.svg" class="img-fluid" alt="" />
+            </div>
+            <h5>Oto Çekici</h5>
+            <p>
+              Çekici ve kurtarıcı olarak hizmet veren araçlarla yolda kalan taşıt
+              sahiplerine hızlı şekilde ulaşarak araçlarını belirttikleri yere
+              çekiyoruz.
+            </p>
           </div>
-          <h5>Oto Çekici</h5>
-          <p>
-            Çekici ve kurtarıcı olarak hizmet veren araçlarla yolda kalan taşıt
-            sahiplerine hızlı şekilde ulaşarak araçlarını belirttikleri yere
-            çekiyoruz.
-          </p>
-        </div>
-        <div class="box">
-          <div class="icon">
-            <img src="assets/img/ambulance.png" class="img-fluid" alt="" />
+          <div class="box">
+            <div class="icon">
+              <img src="assets/img/ambulance.svg" class="img-fluid" alt="" />
+            </div>
+            <h5>Oto Kurtarma</h5>
+            <p>
+              Haraket alanı kısıtlanan veya kendi motor gücüyle bulunduğu yerden
+              çıkayaman araçlar Çekici Çağır'dan oto kurtarma konusunda destek
+              alabilirler.
+            </p>
           </div>
-          <h5>Oto Kurtarma</h5>
-          <p>
-            Haraket alanı kısıtlanan veya kendi motor gücüyle bulunduğu yerden
-            çıkayaman araçlar Çekici Çağır'dan oto kurtarma konusunda destek
-            alabilirler.
-          </p>
-        </div>
-        <div class="box">
-          <div class="icon">
-            <img src="assets/img/truck.png" class="img-fluid" alt="" />
+          <div class="box">
+            <div class="icon">
+              <img src="assets/img/truck.svg" class="img-fluid" alt="" />
+            </div>
+            <h5>Çoklu Araç Taşıma</h5>
+            <p>
+              Uzun mesafelerde şehirler arası çekici hizmetimizi kullanarak
+              araçlarınızı istediğiniz yerden yaşadığınız şehre getirtebilirsiniz.
+            </p>
           </div>
-          <h5>Çoklu Araç Taşıma</h5>
-          <p>
-            Uzun mesafelerde şehirler arası çekici hizmetimizi kullanarak
-            araçlarınızı istediğiniz yerden yaşadığınız şehre getirtebilirsiniz.
-          </p>
-        </div>
-        <div class="box">
-          <div class="icon">
-            <img src="assets/img/quad.png" class="img-fluid" alt="" />
+          <div class="box">
+            <div class="icon">
+              <img src="assets/img/quad.svg" class="img-fluid" alt="" />
+            </div>
+            <h5>VIP Araç Taşıma</h5>
+            <p>
+              Özellikle şehirler arası araç taşımada 12 ve 24 saatte teslimat
+              seçeneğinden yararlanabilirsiniz.
+            </p>
           </div>
-          <h5>VIP Araç Taşıma</h5>
-          <p>
-            Özellikle şehirler arası araç taşımada 12 ve 24 saatte teslimat
-            seçeneğinden yararlanabilirsiniz.
-          </p>
-        </div>
-        <div class="box">
-          <div class="icon">
-            <img src="assets/img/crane.png" class="img-fluid" alt="" />
+          <div class="box">
+            <div class="icon">
+              <img src="assets/img/crane.svg" class="img-fluid" alt="" />
+            </div>
+            <h5>Akü Takviye</h5>
+            <p>
+              Yol yardım araçlarımıza ulaşarak size yakın olan mobil araçtan
+              yardım isteyebilir, çok sık karşılaşılan bu durum için artık Çekici
+              Çağır'dan yardım talep edebilirsiniz.
+            </p>
           </div>
-          <h5>Akü Takviye</h5>
-          <p>
-            Yol yardım araçlarımıza ulaşarak size yakın olan mobil araçtan
-            yardım isteyebilir, çok sık karşılaşılan bu durum için artık Çekici
-            Çağır'dan yardım talep edebilirsiniz.
-          </p>
-        </div>
-        <div class="box">
-          <div class="icon">
-            <img src="assets/img/bus.png" class="img-fluid" alt="" />
+          <div class="box">
+            <div class="icon">
+              <img src="assets/img/bus.svg" class="img-fluid" alt="" />
+            </div>
+            <h5>Kamyon/Otobüs Kurtarma</h5>
+            <p>
+              Yol yardım araçlarımıza ulaşarak size yakın olan mobil araçtan
+              yardım isteyebilir, çok sık karşılaşılan bu durum için artık Çekici
+              Çağır'dan yardım talep edebilirsiniz.
+            </p>
           </div>
-          <h5>Kamyon/Otobüs Kurtarma</h5>
-          <p>
-            Yol yardım araçlarımıza ulaşarak size yakın olan mobil araçtan
-            yardım isteyebilir, çok sık karşılaşılan bu durum için artık Çekici
-            Çağır'dan yardım talep edebilirsiniz.
-          </p>
         </div>
-      </div>
+        <div class="service-mobile">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <div class="icon">
+                          <img src="assets/img/taxi.svg" class="img-fluid" alt="" />
+                        </div>
+                        <h5>Oto Çekici</h5>
+                        <p>
+                          Çekici ve kurtarıcı olarak hizmet veren araçlarla yolda kalan taşıt
+                          sahiplerine hızlı şekilde ulaşarak araçlarını belirttikleri yere
+                          çekiyoruz.
+                        </p>
+                  </div>
+                  <div class="carousel-item">
+                      <div class="icon">
+                          <img src="assets/img/crane.svg" class="img-fluid" alt="" />
+                        </div>
+                        <h5>Akü Takviye</h5>
+                        <p>
+                          Yol yardım araçlarımıza ulaşarak size yakın olan mobil araçtan
+                          yardım isteyebilir, çok sık karşılaşılan bu durum için artık Çekici
+                          Çağır'dan yardım talep edebilirsiniz.
+                        </p>
+                  </div>
+                  <div class="carousel-item">
+                      <div class="icon">
+                          <img src="assets/img/bus.svg" class="img-fluid" alt="" />
+                        </div>
+                        <h5>Kamyon/Otobüs Kurtarma</h5>
+                        <p>
+                          Yol yardım araçlarımıza ulaşarak size yakın olan mobil araçtan
+                          yardım isteyebilir, çok sık karşılaşılan bu durum için artık Çekici
+                          Çağır'dan yardım talep edebilirsiniz.
+                        </p>
+                  </div>
+                </div>
+              </div>
+        </div>
+        </div>
     </section>
-    <!-- END services -->
+      <!-- END services -->
 
     <!-- img-with-text -->
     <div class="img-with-text">
       <div class="img">
-        <img src="assets/img/happy@2x.png" alt="" />
+        <img src="assets/img/happy.svg" alt="" />
       </div>
       <p>
         Aracınızla geçirebileceğiniz talihsiz bir yolda kalma durumundan sonra
@@ -326,7 +360,7 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="img">
-              <img src="assets/img/taxi-green.png" class="img-fluid" alt="" />
+              <img src="assets/img/taxi-green.svg" class="img-fluid" alt="" />
             </div>
             <h3>Oto Çekici</h3>
             <p>
@@ -343,7 +377,7 @@
           </div>
           <div class="carousel-item">
             <div class="img">
-              <img src="assets/img/taxi-green.png" class="img-fluid" alt="" />
+              <img src="assets/img/taxi-green.svg" class="img-fluid" alt="" />
             </div>
             <h3>Oto Çekici</h3>
             <p>
@@ -360,7 +394,7 @@
           </div>
           <div class="carousel-item">
             <div class="img">
-              <img src="assets/img/taxi-green.png" class="img-fluid" alt="" />
+              <img src="assets/img/taxi-green.svg" class="img-fluid" alt="" />
             </div>
             <h3>Oto Çekici</h3>
             <p>
@@ -404,8 +438,8 @@
         <button id="hide-province">
           Hizmet Verdiğimiz İller
           <span>
-            <img src="assets/img/close-arrow.png" class="close-arrow" alt="" />
-            <img src="assets/img/open-arrow.png" class="open-arrow" alt="" />
+            <img src="assets/img/close-arrow.svg" class="close-arrow" alt="" />
+            <img src="assets/img/open-arrow.svg" class="open-arrow" alt="" />
           </span>
         </button>
       </div>
@@ -500,7 +534,7 @@
       <div class="foo-menu">
         <div class="first-child">
           <div>
-            <img src="assets/img/logo-mini.png" alt="" />
+            <img src="assets/img/logo-mini.svg" alt="" />
           </div>
           <span>©2017</span>
           <h6>Çekici Çağır</h6>
@@ -545,6 +579,10 @@
     <script src="assets/js/vendor/jquery.js"></script>
     <script src="assets/js/vendor/popper.min.js"></script>
     <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script>
+        $('.select2').select2();
+      </script>
     <!-- build:js -->
     <script src="assets/js/app.js"></script>
     <!-- endbuild -->
