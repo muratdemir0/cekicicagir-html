@@ -11156,16 +11156,7 @@ section.intro {
   margin: 0;
 }
 
-#how-it-works {
-  width: 100%;
-  padding-top: 0;
-}
-
-#how-it-works .wrapper {
-  background-color: #ffffff;
-}
-
-#how-it-works .wrapper-center {
+.wrapper-center {
   max-width: 1120px;
   margin: 0 auto;
   position: relative;
@@ -11173,9 +11164,18 @@ section.intro {
 }
 
 @media (max-width: 768px) {
-  #how-it-works .wrapper-center {
+  .wrapper-center {
     top: 0;
   }
+}
+
+#how-it-works {
+  width: 100%;
+  padding-top: 0;
+}
+
+#how-it-works .wrapper {
+  background-color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -11553,7 +11553,7 @@ section.intro {
 }
 
 .services.content {
-  margin: 72px 0;
+  margin: 72px auto;
 }
 
 @media (max-width: 768px) {

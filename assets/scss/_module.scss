@@ -354,20 +354,21 @@ section{
     margin: 0;
   }
 }
+
+.wrapper-center{
+  max-width: 1120px;
+  margin: 0 auto;
+  position: relative;
+  top: -120px;
+  @include md{
+    top: 0;
+  }
+}
 #how-it-works{
   width: 100%;
   padding-top: 0;
   .wrapper{
     background-color: $white;
-  }
-  .wrapper-center{
-    max-width: 1120px;
-    margin: 0 auto;
-    position: relative;
-    top: -120px;
-    @include md{
-      top: 0;
-    }
   }
   @include md{
     padding-top: 0;
@@ -634,7 +635,7 @@ section{
     }
   }
   &.content{
-    margin: 72px 0;
+    margin: 72px auto;
     @include md{
       margin: 72px 10px;
     }
