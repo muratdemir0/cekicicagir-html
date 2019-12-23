@@ -28,8 +28,13 @@ ul{
 .open-arrow{
   display: none;
 }
-//Responsive Queries
 
+.gray-text{
+  color: #BDBDBD;
+  font-size: 12px;
+}
+
+//Responsive Queries
 $screen-xs-max: 425px;  // Tiny phones
 $screen-sm-max: 576px;  // Small tablets and large smartphones (landscape view)
 $screen-md-max: 768px;  // Small tablets (portrait view)

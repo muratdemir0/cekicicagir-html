@@ -578,7 +578,7 @@ section{
   }
 }
 
-#services{
+.services{
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
@@ -631,6 +631,27 @@ section{
     }
     @include md{
       padding: 0 30px;
+    }
+  }
+  &.content{
+    margin: 72px 0;
+    @include md{
+      margin: 72px 10px;
+    }
+    h3{
+      color: #212121;
+      font-size: 20px;
+      margin-bottom: 24px;
+      font-weight: 600;
+    }
+    .carousel-item{
+      box-shadow: 0px 1px 5px rgba(33, 33, 33, 0.15);
+      border-radius: 3px;
+      background: white;
+      padding: 12px;
+    }
+    .service-mobile{
+      margin: 0;
     }
   }
 }
@@ -762,7 +783,7 @@ footer{
   position: relative;
   left: -10px;
 }
-#detail{
+.detail{
   background-color: $white;
   @include md{
   padding: 16px
@@ -790,6 +811,15 @@ footer{
   p{
     line-height: 1.5;
     font-size: 1.142rem;
+  }
+  &.content{
+    .detail-wrap{
+      top: 0;
+      .gray-text{
+        display: block;
+        margin-bottom: 14px;
+      }
+    }
   }
 }
 .sub-page{
@@ -973,6 +1003,27 @@ footer{
     margin-top: 34px;
     @include md{
       width: 100%;
+    }
+  }
+}
+.breadcrumb{
+  margin:  36px 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: transparent;
+  @include md{
+    margin: 16px 0 36px 0;
+  }
+  .breadcrumb-item{
+    a{
+      color:$blue;
+    }
+  }
+  .breadcrumb-item:not(:first-child){
+    &:before{
+      content: "\f105";
+      font-family: FontAwesome;
+      color:$blue;
     }
   }
 }
