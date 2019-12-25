@@ -10606,6 +10606,33 @@ ul {
   font-size: 12px;
 }
 
+.bold {
+  font-weight: 600;
+}
+
+.badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  background-color: #0a9ac9;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+}
+
+.badge .text {
+  position: relative;
+  z-index: 2;
+}
+
 /*
 @include sm{
 
@@ -10706,7 +10733,7 @@ main section {
 
 main .jumbotron {
   max-width: 768px;
-  padding: 125px 0 100px 0;
+  padding: 125px 0 70px 0;
   background-color: #f9f9f9;
 }
 
@@ -10725,7 +10752,7 @@ main .jumbotron h1 {
   line-height: 1.26;
   font-weight: 600;
   font-size: 3.857rem;
-  margin-bottom: 36px;
+  line-height: 4.857rem;
   color: #212121;
 }
 
@@ -10734,6 +10761,17 @@ main .jumbotron h1 {
     font-size: 2.285rem;
     margin-top: 20px;
   }
+}
+
+main .jumbotron p {
+  font-size: 1.142rem;
+  line-height: 1.857rem;
+}
+
+main .jumbotron .btn-primary {
+  width: 100%;
+  max-width: 235px;
+  height: 45px;
 }
 
 .go-to-panel {
@@ -10790,6 +10828,7 @@ main .jumbotron h1 {
   font-size: 1.142rem;
   text-transform: uppercase;
   border-color: #0a9ac9;
+  border-radius: 3px;
 }
 
 .btn-primary .icon {
@@ -11016,6 +11055,10 @@ main .jumbotron h1 {
           flex-grow: inherit;
 }
 
+.navbar {
+  height: 72px;
+}
+
 @media (max-width: 768px) {
   .navbar {
     background-color: #f9f9f9;
@@ -11125,6 +11168,12 @@ section.intro {
   background: url("../img/rectangle-copy-7.png");
 }
 
+section h2 {
+  font-size: 34px;
+  line-height: 44px;
+  font-weight: 500;
+}
+
 .call-to-action {
   padding: 40px 0;
   background-color: #22a7a7;
@@ -11133,6 +11182,12 @@ section.intro {
   text-align: center;
   font-weight: 600;
   line-height: 1.30;
+}
+
+@media (max-width: 992px) {
+  .call-to-action {
+    padding: 15px 0;
+  }
 }
 
 .call-to-action .btn {
@@ -11154,13 +11209,21 @@ section.intro {
 
 .call-to-action p {
   margin: 0;
+  font-size: 2.125rem;
+  font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  .call-to-action p {
+    line-height: 4.062rem;
+  }
 }
 
 .wrapper-center {
   max-width: 1120px;
   margin: 0 auto;
   position: relative;
-  top: -120px;
+  top: -60px;
 }
 
 @media (max-width: 768px) {
@@ -11271,6 +11334,67 @@ section.intro {
   #how-it-works ul li img {
     height: 136px;
   }
+}
+
+.how-it-works-v2 ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 110%;
+  margin-left: -5%;
+  overflow: hidden;
+  position: relative;
+}
+
+.how-it-works-v2 ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20%;
+}
+
+.how-it-works-v2 ul li span {
+  text-align: center;
+}
+
+.how-it-works-v2 .wrapper {
+  background-color: #ffffff;
+}
+
+.how-it-works-v2 .badge {
+  margin: 16px 0;
+}
+
+.how-it-works-v2 .badge:after {
+  content: "";
+  height: 1px;
+  background-color: #0a9ac9;
+  position: absolute;
+  z-index: 1;
+  right: 10%;
+  left: 10%;
+}
+
+.how-it-works-v2 span {
+  line-height: 1.25rem;
+}
+
+.how-it-works-v2 .bold {
+  font-size: 1.25rem;
+  line-height: 1.875rem;
 }
 
 #province {
@@ -11460,9 +11584,9 @@ section.intro {
 }
 
 .img-with-text p {
-  padding: 0 120px;
-  font-size: 2.428rem;
-  line-height: 1.29;
+  padding: 0 0 0 120px;
+  font-size: 2.125rem;
+  line-height: 2.75rem;
   color: #0a9ac9;
 }
 
@@ -11487,11 +11611,11 @@ section.intro {
 
 .services .services-wrap {
   position: relative;
-  top: -150px;
+  top: -185px;
 }
 
 .services h2 {
-  margin-bottom: 90px;
+  margin-bottom: 80px;
 }
 
 @media (max-width: 768px) {

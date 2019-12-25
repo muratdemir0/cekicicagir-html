@@ -19,7 +19,8 @@
   height: 110px;
   border-radius: 50% 50% 50% 50%/0% 10% 85% 75%;
   z-index: 2;
-  @include md{
+
+  @include md {
     right: initial;
     left: -21px;
     top: -21px;
@@ -27,13 +28,17 @@
     height: 120px;
     border-radius: 50% 50% 50% 50% / 40% 20% 75% 30%;
   }
+
+
   img {
     margin-right: 12px;
   }
+
   span {
     text-align: left;
     max-width: 50px;
-    @include md{
+
+    @include md {
       line-height: 1.25;
     }
   }
@@ -45,6 +50,7 @@
   font-size: 1.142rem;
   text-transform: uppercase;
   border-color: $blue;
+  border-radius: 3px;
 
   .icon {
     display: inline-block;
@@ -78,14 +84,17 @@
     color: $blue;
   }
 }
-.select2-dropdown{
+
+.select2-dropdown {
   border: 0;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
 }
-.select2-results{
+
+.select2-results {
   padding: 10px;
 }
-.select2-container--default .select2-selection--single{
+
+.select2-container--default .select2-selection--single {
   width: 100%;
   background-color: $highlight;
   border-radius: 3px;
@@ -97,17 +106,20 @@
   text-align: left;
   position: relative;
 }
-.select2-container--default .select2-selection--single .select2-selection__rendered{
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
   display: flex;
   align-items: center;
   padding: 0;
-  line-height: normal!important;
+  line-height: normal !important;
   height: 100%;
   font-size: 1.142rem;
 }
+
 .jumbotron {
   max-width: 768px;
   margin: 0 auto;
+
   .filter-wrap {
     max-width: 768px;
     background-color: $white;
@@ -116,15 +128,18 @@
     display: flex;
     justify-content: space-between;
     box-shadow: 0 1px 5px 0 rgba(33, 33, 33, 0.15);
-    @include md{
-      flex-direction: column;
 
+    @include md {
+      flex-direction: column;
     }
-    .select2-container{
+
+
+    .select2-container {
       flex-basis: 50%;
       margin-right: 12px;
       position: relative;
-      &:after{
+
+      &:after {
         content: "\f107";
         font-family: FontAwesome;
         position: absolute;
@@ -135,22 +150,28 @@
         color: $blue;
       }
     }
-    .select2-container--default .select2-selection--single .select2-selection__arrow{
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
       display: none;
     }
-    .dropdown{
+
+    .dropdown {
       margin-right: 24px;
       margin-bottom: 0;
       flex-grow: 1;
       border: 0;
-      @include md{
+
+      @include md {
         margin-right: 0;
         margin-bottom: 12px;
       }
+
+
       &:last-child {
         margin-right: 0;
       }
-      button{
+
+      button {
         width: 100%;
         background-color: $highlight;
         border-radius: 3px;
@@ -161,50 +182,60 @@
         padding: 0 10px;
         text-align: left;
         position: relative;
-        i{
+
+        i {
           position: absolute;
           right: 10px;
           top: 50%;
           transform: translateY(-50%);
           color: $blue;
         }
-        &:after{
+
+        &:after {
           display: none;
         }
       }
-      .dropdown-menu{
+
+      .dropdown-menu {
         width: 100%;
         border: 0;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
         margin: 17px 0 0;
-        .dropdown-item{
+
+        .dropdown-item {
           color: $primary-font-color;
-          &:hover{
+
+          &:hover {
             background-color: $highlight;
           }
         }
       }
     }
-    .btn-primary{
+
+    .btn-primary {
       position: relative;
       padding-left: 35px;
-      .icon{
+
+      .icon {
         position: absolute;
         left: 9px;
         top: 7px;
       }
     }
+
     button {
       height: 100%;
       white-space: nowrap;
       font-size: 16px;
-      @include md{
+
+      @include md {
         margin-top: 12px;
         width: 100%;
       }
     }
   }
 }
+
 .form-side-by-side {
   display: flex;
 
@@ -221,37 +252,44 @@
 
 //Header
 //Logo
-.navbar{
-  @include md{
+.navbar {
+  height: 72px;
+  @include md {
     background-color: $background;
   }
-  &.sticky{
+
+  &.sticky {
     transition: all .5s ease;
     background-color: #fff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   }
-  .navbar-collapse{
-    @include md{
+
+  .navbar-collapse {
+    @include md {
       padding-right: 0;
       height: 100vh;
       padding-top: 60px;
       padding: 60px 30px;
-      ul{
-        li{
-          a{
+
+      ul {
+        li {
+          a {
             height: 60px;
             line-height: 60px;
             border-bottom: 1px solid $light;
-            padding:0;
+            padding: 0;
+
             &:hover,
-            &:active{
+            &:active {
               background-color: $background;
             }
-            &.active{
+
+            &.active {
               padding: 0 0 0 30px;
-              span{
-                &:first-child{
-                  img{
+
+              span {
+                &:first-child {
+                  img {
                     top: 9px;
                   }
                 }
@@ -263,22 +301,26 @@
     }
   }
 }
+
 .navbar-brand {
-  &.mobile{
-    .logo-mobile{
+  &.mobile {
+    .logo-mobile {
       transition: all .3s ease;
-      &.hide{
-        @include md{
+
+      &.hide {
+        @include md {
           opacity: 0;
         }
       }
     }
   }
+
   img {
     height: 48px;
   }
-  &.mobile{
-    @include md{
+
+  &.mobile {
+    @include md {
       margin: 0 auto;
       height: 80px;
       line-height: 80px;
@@ -286,17 +328,20 @@
     }
   }
 }
-.navbar-toggler{
+
+.navbar-toggler {
   margin: 10px 0;
   position: absolute;
   right: 0;
   top: 0;
-  &:focus{
+
+  &:focus {
     outline: none;
   }
+
   &:after,
   &:before,
-  span{
+  span {
     background-color: $blue;
     border-radius: 3px;
     content: '';
@@ -306,28 +351,40 @@
     transition: all .2s ease-in-out;
     width: 25px;
   }
-  span{
+
+  span {
     width: 35px;
   }
-  &.toggle{
-    &:after{
+
+  &.toggle {
+    &:after {
       transform: translateY(-12px) rotate(-135deg);
     }
-    &:before{
+
+    &:before {
       transform: translateY(12px) rotate(135deg);
     }
-    span{
+
+    span {
       transform: scale(0);
     }
   }
 }
+
 //Sections
-section{
-  &.intro{
-    background: url('../img/rectangle-copy-7.png');
+section {
+  &.intro {
+    background: url("../img/rectangle-copy-7.png");
+  }
+
+  h2 {
+    font-size: 34px;
+    line-height: 44px;
+    font-weight: 500;
   }
 }
-.call-to-action{
+
+.call-to-action {
   padding: 40px 0;
   background-color: $green;
   color: $secondary-font-color;
@@ -335,7 +392,10 @@ section{
   text-align: center;
   font-weight: 600;
   line-height: 1.30;
-  .btn{
+  @include lg{
+    padding: 15px 0;
+  }
+  .btn {
     border: 1px solid $white;
     color: $white;
     margin: 0 24px;
@@ -345,105 +405,188 @@ section{
     font-weight: 600;
     font-size: 1.285rem;
     text-transform: uppercase;
-    &:hover{
+
+    &:hover {
       background-color: $white;
-      color: $primary-font-color
+      color: $primary-font-color;
     }
   }
-  p{
+
+  p {
     margin: 0;
+    font-size: 2.125rem;
+    font-weight: 500;
+    @include lg {
+      line-height: 4.062rem;
+    }
   }
 }
 
-.wrapper-center{
+.wrapper-center {
   max-width: 1120px;
   margin: 0 auto;
   position: relative;
-  top: -120px;
-  @include md{
+  top: -60px;
+
+  @include md {
     top: 0;
   }
 }
-#how-it-works{
+
+#how-it-works {
   width: 100%;
   padding-top: 0;
-  .wrapper{
+
+  .wrapper {
     background-color: $white;
   }
-  @include md{
+
+  @include md {
     padding-top: 0;
   }
-  h2{
+
+
+  h2 {
     margin-bottom: 50px;
     color: $alternative-font-color;
     font-weight: normal;
   }
-  ul{
+
+  ul {
     display: flex;
     justify-content: space-around;
-    @include md{
+
+    @include md {
       flex-direction: column;
     }
-    li{
+
+
+    li {
       text-align: center;
-      @include md{
+
+      @include md {
         margin-bottom: 45px;
       }
-      &:nth-child(2){
+
+
+      &:nth-child(2) {
         align-self: center;
-        @include md{
+
+        @include md {
           display: none;
         }
       }
-      &:nth-child(3){
+
+      &:nth-child(3) {
         margin-top: 75px;
-        @include md{
+
+        @include md {
           margin-top: 0;
         }
       }
-      &:nth-child(4){
+
+      &:nth-child(4) {
         position: relative;
         top: 200px;
-        @include md{
+
+        @include md {
           display: none;
           top: 0;
         }
       }
-      &:last-child{
+
+      &:last-child {
         position: relative;
         top: 200px;
-        @include md{
+
+        @include md {
           top: 0;
         }
       }
-      p{
+
+      p {
         font-size: 1.285rem;
         max-width: 250px;
         margin: 0 auto;
       }
-      img{
-        @include md{
+
+      img {
+        @include md {
           height: 136px;
         }
       }
     }
   }
 }
+
+.how-it-works-v2 {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 110%;
+    margin-left: -5%;
+    overflow: hidden;
+    position: relative;
+    li {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 20%;
+
+      span {
+        text-align: center;
+      }
+    }
+  }
+
+  .wrapper {
+    background-color: $white;
+  }
+
+  .badge {
+    margin: 16px 0;
+    &:after{
+      content: "";
+      height: 1px;
+      background-color: $blue;
+      position: absolute;
+      z-index: 1;
+      right: 10%;
+      left: 10%;
+    }
+  }
+
+  span {
+    line-height: 1.25rem;
+  }
+
+  .bold {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+}
+
 //Province
-#province{
+#province {
   display: flex;
   flex-direction: column;
   padding: 0;
-  .button-wrapper{
+
+  .button-wrapper {
     border-bottom: 6px solid $blue;
     display: flex;
     position: relative;
     z-index: 2;
-    &.services{
+
+    &.services {
       background-color: $white;
     }
   }
-  button{
+
+  button {
     display: inline-block;
     background-color: $blue;
     color: $secondary-font-color;
@@ -457,86 +600,106 @@ section{
     margin-left: auto;
     position: relative;
     bottom: -1px;
-    &:focus{
+
+    &:focus {
       box-shadow: none;
       outline: 0;
     }
-    span{
+
+    span {
       display: inline-block;
       margin-left: 15px;
     }
   }
-  .content{
+
+  .content {
     padding: 36px 120px;
     background-color: $blue;
     position: relative;
     z-index: 2;
-    @include md{
+
+    @include md {
       padding: 20px;
     }
   }
-  ul{
+
+  ul {
     column-count: 6;
-    @include md{
+
+    @include md {
       column-count: 3;
     }
-    li{
+
+
+    li {
       color: $secondary-font-color;
       line-height: 1.5;
-      font-size: 1.142rem
+      font-size: 1.142rem;
     }
   }
 }
 
 //
-.carousel-indicators{
-  li{
+.carousel-indicators {
+  li {
     background-color: $blue;
     width: 12px;
     height: 12px;
     border-radius: 50%;
   }
 }
-#carousel{
-  .carousel{
+
+#carousel {
+  .carousel {
     width: 635px;
     border-radius: 3px;
     box-shadow: 0 1px 5px 0 rgba(33, 33, 33, 0.15);
     margin: 40px auto;
-    @include md{
+
+    @include md {
       width: 85%;
     }
-    .carousel-item{
+
+
+    .carousel-item {
       padding: 80px 100px;
       text-align: center;
-      @include md{
+
+      @include md {
         padding: 50px 30px;
       }
-      .img{
-        @include md{
+
+
+      .img {
+        @include md {
           text-align: left;
         }
       }
-      h3{
+
+      h3 {
         color: $green;
         line-height: 1.29;
         font-size: 2.428rem;
         font-weight: 600;
         margin: 25px 0;
         text-transform: uppercase;
-        @include md{
+
+        @include md {
           font-size: 2rem;
           text-align: left;
         }
       }
-      p{
+
+      p {
         font-size: 1.142rem;
         line-height: 1.5;
-        @include md{
+
+        @include md {
           text-align: left;
         }
       }
-      button{
+
+      button {
         background-color: $green;
         border-color: $green;
         text-transform: uppercase;
@@ -544,7 +707,8 @@ section{
         line-height: 45px;
         margin-top: 25px;
         padding: 0;
-        &:hover{
+
+        &:hover {
           background-color: darken($green, 10);
         }
       }
@@ -552,191 +716,237 @@ section{
   }
 }
 
-.img-with-text{
+.img-with-text {
   display: flex;
   align-items: center;
   padding: 0 120px 100px 120px;
   margin: 0;
-  @include md{
+
+  @include md {
     flex-direction: column;
     margin: 0;
     padding: 0 30px 50px 30px;
     margin-top: 50px;
   }
-  p{
-    padding: 0 120px;
-    font-size: 2.428rem;
-    line-height: 1.29;
+
+  p {
+    padding: 0 0 0 120px;
+    font-size: 2.125rem;
+    line-height: 2.75rem;
     color: $blue;
-    @include md{
+
+    @include md {
       font-size: 1.428rem;
       padding: 0 15px;
       text-align: left;
     }
   }
-  img{
+
+  img {
     height: 275px;
   }
 }
 
-.services{
+.services {
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
   padding: 0;
-  .services-wrap{
+
+  .services-wrap {
     position: relative;
-    top: -150px;
+    top: -185px;
   }
-  h2{
-    margin-bottom: 90px;
-    @include md{
+
+  h2 {
+    margin-bottom: 80px;
+
+    @include md {
       margin-bottom: 45px;
     }
   }
-  .service-mobile{
+
+  .service-mobile {
     margin: 0 24px;
-    display:none;
+    display: none;
+
     @include md {
       display: block;
     }
-    .carousel-indicators{
+
+
+    .carousel-indicators {
       bottom: -50px;
     }
-    .carousel-inner{
-      .carousel-item{
-        img{
+
+    .carousel-inner {
+      .carousel-item {
+        img {
           margin-bottom: 24px;
           height: 50px;
         }
-        h5{
+
+        h5 {
           color: #616161;
           line-height: 1.57;
           font-size: 1.285rem;
           font-weight: 600;
         }
-        p{
+
+        p {
           color: #bdbdbd;
           line-height: 1.57;
         }
       }
     }
   }
-  .service-wrap{
+
+  .service-wrap {
     display: flex;
     flex-wrap: wrap;
-    &.desktop{
+
+    &.desktop {
       @include md {
         display: none;
       }
     }
-    @include md{
+
+    @include md {
       padding: 0 30px;
     }
   }
-  &.content{
+
+  &.content {
     margin: 72px auto;
-    @include md{
+
+    @include md {
       margin: 72px 10px;
     }
-    h3{
+
+
+    h3 {
       color: #212121;
       font-size: 20px;
       margin-bottom: 24px;
       font-weight: 600;
     }
-    .carousel-item{
+
+    .carousel-item {
       box-shadow: 0px 1px 5px rgba(33, 33, 33, 0.15);
       border-radius: 3px;
       background: white;
       padding: 12px;
     }
-    .service-mobile{
+
+    .service-mobile {
       margin: 0;
     }
   }
 }
 
-.box{
+.box {
   width: calc(33.33% - 20px);
   margin-right: 10px;
   margin-bottom: 70px;
-  @include md{
+
+  @include md {
     width: 100%;
     margin-bottom: 35px;
   }
-  img{
+
+
+  img {
     margin-bottom: 24px;
     height: 50px;
   }
-  h5{
+
+  h5 {
     color: #616161;
     line-height: 1.57;
     font-size: 1.285rem;
     font-weight: 600;
   }
-  p{
+
+  p {
     color: #bdbdbd;
     line-height: 1.57;
   }
-  &:last-child{
-    @include md{
+
+  &:last-child {
+    @include md {
       margin-bottom: 0;
     }
   }
 }
-footer{
+
+footer {
   display: flex;
   justify-content: space-between;
   background-color: $highlight;
   padding: 50px 100px;
-  @include md{
+
+  @include md {
     padding: 36px 16px;
     flex-direction: column;
   }
-  .foo-menu{
-    @include md{
+
+
+  .foo-menu {
+    @include md {
       text-align: center;
       margin: 10px 0;
     }
-    .first-child{
+
+
+    .first-child {
       text-align: center;
       font-size: 0.857rem;
+
       > * {
         margin-bottom: 10px;
       }
-      img{
+
+      img {
         height: 50px;
       }
-      h6{
+
+      h6 {
         margin: 5px 0 0;
         font-size: 0.857rem;
         font-weight: normal;
         text-transform: capitalize;
       }
     }
-    &:nth-child(4){
+
+    &:nth-child(4) {
       max-width: 350px;
     }
-    &:last-child{
+
+    &:last-child {
       max-width: 200px;
-      @include md{
+
+      @include md {
         max-width: 100%;
       }
-      h6{
+
+
+      h6 {
         color: $blue;
       }
     }
-    h6{
+
+    h6 {
       text-transform: uppercase;
       font-weight: 600;
     }
-    ul{
+
+    ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
-      li{
-        a{
+
+      li {
+        a {
           display: block;
           color: $blue;
           line-height: 1.5;
@@ -744,7 +954,8 @@ footer{
           font-size: 1.142rem;
           transition: all .3s ease;
           border-bottom: 1px solid transparent;
-          &:hover{
+
+          &:hover {
             color: darken($color: $blue, $amount: 10);
             text-decoration: none;
             border-bottom-color: darken($color: $blue, $amount: 15);
@@ -754,88 +965,108 @@ footer{
     }
   }
 }
-.logo-mobile{
+
+.logo-mobile {
   display: none;
-  @include md{
+
+  @include md {
     display: block;
   }
 }
-.logo-desktop{
-  @include md{
-    display: none,
+
+.logo-desktop {
+  @include md {
+    display: (none,);
   }
 }
-.desktop-header-img{
+
+.desktop-header-img {
   @include md {
     display: none;
   }
 }
-.mobile-header-img{
+
+.mobile-header-img {
   display: none;
   padding: 0;
   margin: 0;
   width: 100%;
 
-  @include md{
+  @include md {
     display: block;
   }
 }
-.navbar-toggler-icon{
+
+.navbar-toggler-icon {
   position: relative;
   left: -10px;
 }
-.detail{
+
+.detail {
   background-color: $white;
-  @include md{
-  padding: 16px
+
+  @include md {
+    padding: 16px;
   }
-  .detail-wrap{
+
+
+  .detail-wrap {
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
     position: relative;
     top: -200px;
-    @include md{
+
+    @include md {
       top: 0;
     }
   }
+
   .text,
-  .img{
+  .img {
     margin-bottom: 36px;
   }
-  h6{
+
+  h6 {
     font-size: 1.428rem;
     font-weight: 600;
     max-width: 325px;
     margin-bottom: 36px;
   }
-  p{
+
+  p {
     line-height: 1.5;
     font-size: 1.142rem;
   }
-  &.content{
-    .detail-wrap{
+
+  &.content {
+    .detail-wrap {
       top: 0;
-      .gray-text{
+
+      .gray-text {
         display: block;
         margin-bottom: 14px;
       }
     }
   }
 }
-.sub-page{
+
+.sub-page {
   background-color: $white;
   padding: 0;
-  .header{
-    background: url('../img/services-header-bg-pattern.png') no-repeat center center;
+
+  .header {
+    background: url("../img/services-header-bg-pattern.png") no-repeat center center;
     background-size: cover;
     height: 700px;
-    @include md{
+
+    @include md {
       display: none;
     }
   }
 }
-.sub-page-wrap{
+
+.sub-page-wrap {
   width: 80%;
   margin: 0 auto;
   position: relative;
@@ -843,59 +1074,75 @@ footer{
   display: flex;
   padding: 0 8.571rem;
   font-size: 1.142rem;
-  @include xxl{
+
+  @include xxl {
     width: 100%;
     padding: 0 7.142rem;
   }
-  @include md{
+
+
+  @include md {
     display: block;
     padding: 25px 0 150px;
     top: 0;
   }
-  .img{
+
+
+  .img {
     @include md {
       display: none;
     }
-    &.mobile{
+
+
+    &.mobile {
       display: none;
-      @include md{
+
+      @include md {
         display: block;
       }
-      img{
+
+
+      img {
         margin: 0 auto;
         display: block;
         width: 100%;
         height: 215px;
       }
     }
-    &.right{
+
+    &.right {
       position: relative;
       left: 70px;
     }
   }
-  h1{
+
+  h1 {
     font-size: 2.428rem;
     font-weight: 600;
     margin-bottom: 36px;
-    @include md{
+
+    @include md {
       margin-bottom: 48px;
     }
   }
-  .content{
+
+  .content {
     max-width: 720px;
     margin-left: 50px;
     top: 70px;
     position: relative;
-    @include md{
-      margin: 0 16px;
 
+    @include md {
+      margin: 0 16px;
     }
   }
-  .box-wrap{
+
+  .box-wrap {
     display: flex;
     flex-wrap: wrap;
   }
-  .box{
+
+  .box {
     background-color: $white;
     border-radius: 3px;
     box-shadow: 0 1px 5px 0 rgba(33, 33, 33, 0.15);
@@ -904,46 +1151,59 @@ footer{
     width: calc(50% - 60px);
     margin-right: 30px;
     margin-bottom: 24px;
-    @include md{
+
+    @include md {
       padding: 12px;
       width: 100%;
       margin-right: 0;
     }
-    .form-group{
-      @include md{
+
+
+    .form-group {
+      @include md {
         margin-bottom: 36px;
       }
     }
-    &.full{
+
+    &.full {
       width: 100%;
       margin-right: 0;
-      h6{
+
+      h6 {
         font-weight: 600;
         margin-bottom: 24px;
       }
     }
-    h6{
+
+    h6 {
       font-size: 1.428rem;
     }
-    p{
+
+    p {
       color: $primary-font-color;
       line-height: 1.5;
     }
-    ul{
+
+    ul {
       margin-bottom: 24px;
       margin-left: 38px;
       columns: 2;
-      @include md{
+
+      @include md {
         columns: auto;
       }
-      h6{
+
+
+      h6 {
         margin-bottom: 24px;
       }
-      li{
+
+      li {
         margin-bottom: 24px;
         display: flex;
         align-items: center;
-        i{
+
+        i {
           font-size: 1.571rem;
           margin-right: 24px;
           color: $green;
@@ -952,44 +1212,53 @@ footer{
     }
   }
 }
-.sub-page-container{
+
+.sub-page-container {
   width: 100%;
-  margin:0 auto;
+  margin: 0 auto;
 }
-.right-path{
-  background: url('../img/right-path.png') no-repeat center center;
+
+.right-path {
+  background: url("../img/right-path.png") no-repeat center center;
   position: absolute;
   right: 0;
   top: 30%;
   width: 1100px;
   height: 1387px;
-  @include xxl{
+
+  @include xxl {
     top: 65%;
   }
-  @include md{
+
+
+  @include md {
     display: none;
   }
 }
-#about-page{
-  h5{
+
+#about-page {
+  h5 {
     color: $green;
   }
 }
-#contact-page{
-  .form-group{
-    label{
+
+#contact-page {
+  .form-group {
+    label {
       font-size: 0.857rem;
       color: $blue;
     }
-    .form-control{
+
+    .form-control {
       background-color: transparent;
       border-bottom: 2px solid $dark;
       transition: all .3s ease;
       border-radius: 0;
       padding-left: 0;
       padding-right: 0;
+
       &:active,
-      &:focus{
+      &:focus {
         border: 0;
         border-bottom: 2px solid #0a9ac9;
         outline: none;
@@ -997,34 +1266,41 @@ footer{
       }
     }
   }
-  .btn-primary{
+
+  .btn-primary {
     width: 85%;
     margin: 0 auto;
     display: block;
     margin-top: 34px;
-    @include md{
+
+    @include md {
       width: 100%;
     }
   }
 }
-.breadcrumb{
-  margin:  36px 0;
+
+.breadcrumb {
+  margin: 36px 0;
   padding: 0;
   list-style-type: none;
   background-color: transparent;
-  @include md{
+
+  @include md {
     margin: 16px 0 36px 0;
   }
-  .breadcrumb-item{
-    a{
-      color:$blue;
+
+
+  .breadcrumb-item {
+    a {
+      color: $blue;
     }
   }
-  .breadcrumb-item:not(:first-child){
-    &:before{
+
+  .breadcrumb-item:not(:first-child) {
+    &:before {
       content: "\f105";
       font-family: FontAwesome;
-      color:$blue;
+      color: $blue;
     }
   }
 }

@@ -1,98 +1,130 @@
 // Layout Style
 
 //Navbar
-.navbar{
+.navbar {
   background-color: transparent;
   padding: 1rem 8.571rem;
-  @include xxl{
+
+  @include xxl {
     padding: 1rem 8.571rem 1rem 7.142rem;
   }
-  @include md{
+
+
+  @include md {
     padding: 0;
     background-color: $background;
   }
-  .nav-link{
+
+
+  .nav-link {
     color: $primary-font-color;
     transition: all .3s ease;
     padding-right: 1.285rem;
     padding-left: 1.285rem;
-    &:hover{
+
+    &:hover {
       color: $green;
     }
-    &.active{
+
+    &.active {
       color: $green;
       font-weight: 600;
       position: relative;
       padding: 0.5rem 30px;
-      span{
-        &:first-child{
+
+      span {
+        &:first-child {
           display: inline-block;
           margin-right: 5px;
-          img{
+
+          img {
             position: absolute;
             top: -4px;
             left: 4px;
           }
         }
       }
-      &:hover{
+
+      &:hover {
         border: 0;
         padding-bottom: 0;
       }
     }
   }
-  .navbar-collapse{
+
+  .navbar-collapse {
     padding-right: 20px;
   }
 }
-section{
+
+section {
   padding: 100px 0;
-  @include md{
+
+  @include md {
     padding: 50px 0;
   }
-  &:first-child{
-    @include md{
+
+
+  &:first-child {
+    @include md {
       padding-top: 0;
     }
   }
 }
 
-h2{
+h2 {
   margin-bottom: 50px;
   font-size: 2.428rem;
   font-weight: 600;
   color: $alternative-font-color;
-  @include md{
+
+  @include md {
     margin-bottom: 45px;
     padding: 0 60px 0 30px;
     font-size: 1.428rem;
   }
 }
-main{
-  section{
+
+main {
+  section {
     padding-top: 0;
     padding-bottom: 25px;
   }
-  .jumbotron{
+
+  .jumbotron {
     max-width: 768px;
-    padding: 125px 0 100px 0;
+    padding: 125px 0 70px 0;
     background-color: $background;
-    @include md{
+
+    @include md {
       padding: 0 2rem;
     }
-   form{
-    box-shadow: 0 1px 5px 0 rgba(33, 33, 33, 0.15);
-   }
-   h1{
-     line-height: 1.26;
-     font-weight: 600;
-     font-size: 3.857rem;
-     margin-bottom: 36px;
-     color: $alternative-font-color;
-     @include md {
-      font-size: 2.285rem;
-      margin-top: 20px;
+
+
+    form {
+      box-shadow: 0 1px 5px 0 rgba(33, 33, 33, 0.15);
     }
-   }
+
+    h1 {
+      line-height: 1.26;
+      font-weight: 600;
+      font-size: 3.857rem;
+      line-height: 4.857rem;
+      color: $alternative-font-color;
+
+      @include md {
+        font-size: 2.285rem;
+        margin-top: 20px;
+      }
+    }
+    p{
+      font-size: 1.142rem;
+      line-height: 1.857rem;
+    }
+    .btn-primary {
+      width: 100%;
+      max-width: 235px;
+      height: 45px;
+    }
   }
 }

@@ -1,5 +1,5 @@
 // General Style
-body{
+body {
   font-size: 14px;
   background: $background;
   color: $primary-font-color;
@@ -10,44 +10,89 @@ body{
   font-stretch: normal;
 }
 
-button{
+button {
   border: 0;
   background-color: transparent;
   transition: all .3s ease;
 }
 
-a{
+a {
   transition: all .3s ease;
 }
 
-ul{
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-.open-arrow{
+
+.open-arrow {
   display: none;
 }
 
-.gray-text{
+.gray-text {
   color: #BDBDBD;
   font-size: 12px;
 }
 
+.bold {
+  font-weight: 600;
+}
+
+.badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  background-color: $blue;
+  color:$secondary-font-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  .text{
+    position: relative;
+    z-index: 2;
+  }
+}
+
 //Responsive Queries
-$screen-xs-max: 425px;  // Tiny phones
-$screen-sm-max: 576px;  // Small tablets and large smartphones (landscape view)
-$screen-md-max: 768px;  // Small tablets (portrait view)
-$screen-lg-max: 992px;  // Tablets and small desktops
+$screen-xs-max: 425px; // Tiny phones
+$screen-sm-max: 576px; // Small tablets and large smartphones (landscape view)
+$screen-md-max: 768px; // Small tablets (portrait view)
+$screen-lg-max: 992px; // Tablets and small desktops
 $screen-xl-max: 1200px; // Large tablets and desktops
 $screen-xxl-max: 1600px; // Large tablets and desktops
 // Mixins
-@mixin xs { @media (max-width: #{$screen-xs-max}) {@content;} } // Tiny devices
-@mixin sm { @media (max-width: #{$screen-sm-max}) {@content;} } // Small devices
-@mixin md { @media (max-width: #{$screen-md-max}) {@content;} } // Medium devices
-@mixin lg { @media (max-width: #{$screen-lg-max}) {@content;} } // Large devices
-@mixin xl { @media (max-width: #{$screen-xl-max}) {@content;} } // Large devices
-@mixin xxl { @media (max-width: #{$screen-xxl-max}) {@content;} } // Extra large devices
+@mixin xs {
+  @media (max-width: #{$screen-xs-max}) {
+    @content;
+  }
+} // Tiny devices
+@mixin sm {
+  @media (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+} // Small devices
+@mixin md {
+  @media (max-width: #{$screen-md-max}) {
+    @content;
+  }
+} // Medium devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+} // Large devices
+@mixin xl {
+  @media (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+} // Large devices
+@mixin xxl {
+  @media (max-width: #{$screen-xxl-max}) {
+    @content;
+  }
+} // Extra large devices
 //Example
 /*
 @include sm{
