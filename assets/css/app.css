@@ -10904,6 +10904,13 @@ main .jumbotron .btn-primary {
   margin: 0 auto;
 }
 
+@media (max-width: 992px) {
+  .jumbotron {
+    margin-top: 85px;
+    padding: 0 14px;
+  }
+}
+
 .jumbotron .filter-wrap {
   max-width: 768px;
   background-color: #ffffff;
@@ -11034,6 +11041,21 @@ main .jumbotron .btn-primary {
   .jumbotron .filter-wrap button {
     margin-top: 12px;
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .jumbotron h1 {
+    font-size: 2.125rem !important;
+    margin-top: 20px !important;
+    line-height: 2.75rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .jumbotron p {
+    font-size: 0.875rem;
+    line-height: 1.625rem;
   }
 }
 
@@ -11172,6 +11194,14 @@ section h2 {
   font-size: 34px;
   line-height: 44px;
   font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  section h2 {
+    font-size: 1.25rem;
+    line-height: 30px;
+    font-weight: 600;
+  }
 }
 
 .call-to-action {
@@ -11352,6 +11382,12 @@ section h2 {
   position: relative;
 }
 
+@media (max-width: 992px) {
+  .how-it-works-v2 ul {
+    display: none;
+  }
+}
+
 .how-it-works-v2 ul li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11378,6 +11414,12 @@ section h2 {
   margin: 16px 0;
 }
 
+@media (max-width: 768px) {
+  .how-it-works-v2 .badge {
+    margin: 0 auto;
+  }
+}
+
 .how-it-works-v2 .badge:after {
   content: "";
   height: 1px;
@@ -11395,6 +11437,50 @@ section h2 {
 .how-it-works-v2 .bold {
   font-size: 1.25rem;
   line-height: 1.875rem;
+}
+
+.how-it-works-mobile {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .how-it-works-mobile {
+    display: block;
+    margin: 0 50px;
+    padding: 0 0 50px 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .how-it-works-mobile .carousel-indicators {
+    bottom: -60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-it-works-mobile .carousel-indicators li {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.how-it-works-mobile .carousel-item img {
+  width: 124px;
+  height: 124px;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .how-it-works-mobile .carousel-item:first-child .badge:after {
+    left: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-it-works-mobile .carousel-item:last-child .badge:after {
+    right: 50%;
+  }
 }
 
 #province {
@@ -11592,9 +11678,10 @@ section h2 {
 
 @media (max-width: 768px) {
   .img-with-text p {
-    font-size: 1.428rem;
     padding: 0 15px;
     text-align: left;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
   }
 }
 
@@ -11612,6 +11699,12 @@ section h2 {
 .services .services-wrap {
   position: relative;
   top: -185px;
+}
+
+@media (max-width: 768px) {
+  .services .services-wrap {
+    top: -50px;
+  }
 }
 
 .services h2 {

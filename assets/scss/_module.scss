@@ -119,7 +119,10 @@
 .jumbotron {
   max-width: 768px;
   margin: 0 auto;
-
+  @include lg{
+    margin-top: 85px;
+    padding: 0 14px;
+  }
   .filter-wrap {
     max-width: 768px;
     background-color: $white;
@@ -132,7 +135,6 @@
     @include md {
       flex-direction: column;
     }
-
 
     .select2-container {
       flex-basis: 50%;
@@ -232,6 +234,19 @@
         margin-top: 12px;
         width: 100%;
       }
+    }
+  }
+  h1{
+    @include md{
+      font-size: 2.125rem!important;
+      margin-top: 20px!important;
+      line-height: 2.75rem!important;
+    }
+  }
+  p{
+    @include md{
+      font-size: 0.875rem;
+      line-height: 1.625rem;
     }
   }
 }
@@ -381,6 +396,11 @@ section {
     font-size: 34px;
     line-height: 44px;
     font-weight: 500;
+    @include md{
+      font-size: 1.25rem;
+      line-height: 30px;
+      font-weight: 600;
+    }
   }
 }
 
@@ -530,6 +550,9 @@ section {
     margin-left: -5%;
     overflow: hidden;
     position: relative;
+    @include lg{
+      display: none;
+    }
     li {
       display: flex;
       align-items: center;
@@ -548,6 +571,9 @@ section {
 
   .badge {
     margin: 16px 0;
+    @include md{
+      margin: 0 auto;
+    }
     &:after{
       content: "";
       height: 1px;
@@ -568,7 +594,53 @@ section {
     line-height: 1.875rem;
   }
 }
+.how-it-works-mobile{
+  display: none;
+  @include lg{
+    display: block;
+    margin: 0 50px;
+    padding: 0 0 50px 0;
+  }
+  .carousel-indicators{
+    @include lg {
+      bottom: -60px;
+    }
+    li{
+      @include md{
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+  .carousel-item{
 
+    img{
+      width: 124px;
+      height: 124px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    &:first-child{
+      .badge{
+        &:after{
+          @include md{
+            left: 50%;
+          }
+        }
+      }
+    }
+    &:last-child{
+      .badge{
+        &:after{
+          @include md{
+            right: 50%;
+          }
+        }
+      }
+    }
+  }
+}
 //Province
 #province {
   display: flex;
@@ -736,9 +808,10 @@ section {
     color: $blue;
 
     @include md {
-      font-size: 1.428rem;
       padding: 0 15px;
       text-align: left;
+      font-size: 1.25rem;
+      line-height: 1.875rem;
     }
   }
 
@@ -756,6 +829,9 @@ section {
   .services-wrap {
     position: relative;
     top: -185px;
+    @include md{
+      top: -50px
+    }
   }
 
   h2 {
