@@ -11101,6 +11101,9 @@ main .jumbotron .btn-primary {
     height: 100vh;
     padding-top: 60px;
     padding: 60px 30px;
+    background-color: #fff;
+    position: relative;
+    top: -10px;
   }
   .navbar .navbar-collapse ul li a {
     height: 60px;
