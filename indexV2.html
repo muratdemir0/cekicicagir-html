@@ -12,6 +12,9 @@
   <link rel="icon" href="assets/img/favicon.ico" />
   <link rel="manifest" href="assets/img//site.webmanifest" />
   <title>Çekici Çağır</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAYeAAgC57B-qTngB4aKkpMh5T75s4TtgE"></script>
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 
   <!-- Icons for this template -->
@@ -76,7 +79,7 @@
           <h1>Çekici sana çok yakın!</h1>
           <p>Nerede kaldığını ve aracının durumunu bildir, <br>
             canlı fiyat teklifleri al, çekici çağır.</p>
-          <button class="btn-primary">Çekici Çağır</button>
+          <button type="button" class="btn-primary" data-toggle="modal" data-target="#finderModal">Çekici Çağır</button>
         </div>
       </div>
       <div class="row">
@@ -549,7 +552,89 @@
     </div>
   </footer>
   <!-- END footer -->
+  <form class="modal multi-step" id="finderModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="btn btn-default btn-close" data-dismiss="modal">X</button>
 
+            <div class="modal-body step-1" data-step="1">
+                <h1>Nerede Kaldın?</h1>
+                <div class="form-group">
+                  <label>Location:</label>
+                  <input type="text" class="form-control" id="search_input" placeholder="Type address..." />
+                  <input type="hidden" id="loc_lat" />
+                  <input type="hidden" id="loc_long" />
+              </div>
+            </div>
+            <div class="modal-body step-2" data-step="2">
+                <h1>Aracınız hareket eder durumda mı?</h1>
+                <form action="#">
+                  <div class="form-check">
+                    <input type="radio" name="yesOrNo" class="form-check-input" id="yesCheck">
+                    <label class="form-check-label" for="yesCheck">Evet</label>
+                    <span class="circle"></span>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" name="yesOrNo" class="form-check-input" id="noCheck">
+                    <label class="form-check-label" for="noCheck">Hayır</label>
+                    <span class="circle"></span>
+                  </div>
+                </form>
+            </div>
+            <div class="modal-body step-3" data-step="3">
+              <h1>Araç tipini seçin?</h1>
+              <form action="#">
+                <div class="form-check">
+                  <input type="radio" name="yesOrNo" class="form-check-input" id="yesCheck">
+                  <img src="assets/img/quad.svg" class="img-fluid" alt="">
+                  <label class="form-check-label" for="yesCheck">Motor</label>
+                  <span class="circle"></span>
+                </div>
+                <div class="form-check">
+                  <input type="radio" name="yesOrNo" class="form-check-input" id="noCheck">
+                  <img src="assets/img/taxi.svg" class="img-fluid" alt="">
+                  <label class="form-check-label" for="noCheck">Binek</label>
+                  <span class="circle"></span>
+                </div>
+                <div class="form-check">
+                  <input type="radio" name="yesOrNo" class="form-check-input" id="noCheck">
+                  <img src="assets/img/truck.svg" class="img-fluid" alt="">
+                  <label class="form-check-label" for="noCheck">Minibüs</label>
+                  <span class="circle"></span>
+                </div>
+                <div class="form-check">
+                  <input type="radio" name="yesOrNo" class="form-check-input" id="noCheck">
+                  <img src="assets/img/bus.svg" class="img-fluid" alt="">
+                  <label class="form-check-label" for="noCheck">Kamyonet</label>
+                  <span class="circle"></span>
+                </div>
+              </form>
+            </div>
+            <div class="modal-header">
+                <div class="wizard-step-name">
+                  <h4 class="modal-title step-1 active" data-step="1">Lokasyon</h4>
+                  <h4 class="modal-title step-2" data-step="2">Araç Durumu</h4>
+                  <h4 class="modal-title step-3" data-step="3">Araç Tipi</h4>
+                </div>
+                <div class="m-progress">
+                    <div class="m-progress-bar-wrapper">
+                        <div class="m-progress-bar">
+                        </div>
+                    </div>
+                    <div class="m-progress-complete">
+                        Tamamlandı
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary step step-2 btn-back" data-step="2" onclick="sendEvent('#finderModal', 1)"><i class="fa fa-angle-left"></i>  Önceki</button>
+                <button type="button" class="btn btn-primary step step-1 btn-forward" data-step="1" onclick="sendEvent('#finderModal', 2)">Devam<i class="fa fa-angle-right"></i> </button>
+                <button type="button" class="btn btn-secondary step step-3 btn-back" data-step="3" onclick="sendEvent('#finderModal', 2)"><i class="fa fa-angle-left"></i> Önceki</button>
+                <button type="button" class="btn btn-primary step step-2 btn-forward" data-step="2" onclick="sendEvent('#finderModal', 3)">Devam<i class="fa fa-angle-right"></i> </button>
+            </div>
+        </div>
+    </div>
+</form>
   <!-- Bootstrap core JavaScript
 ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
@@ -557,9 +642,53 @@
   <script src="assets/js/vendor/popper.min.js"></script>
   <script src="assets/js/vendor/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+  <script src="assets/js/vendor/multi-step-modal.js"></script>
   <script>
+    var searchInput = 'search_input';
+    $(document).ready(function () {
+        var autocomplete;
+        autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+            types: ['geocode'],
+        });
+
+        google.maps.event.addListener(autocomplete, 'place_changed', function () {
+            var near_place = autocomplete.getPlace();
+            document.getElementById('loc_lat').value = near_place.geometry.location.lat();
+            document.getElementById('loc_long').value = near_place.geometry.location.lng();
+
+            document.getElementById('latitude_view').innerHTML = near_place.geometry.location.lat();
+            document.getElementById('longitude_view').innerHTML = near_place.geometry.location.lng();
+        });
+        var input = document.getElementById("search_input");
+        var autocomplete = new google.maps.places.Autocomplete(input);
+
+    });
     $('.select2').select2();
+      var currentBarPercentage = $('.m-progress-bar')[0].style.width;
+      $(".btn.step").click(function(e) {
+        e.stopPropagation();
+        if(currentBarPercentage > "14"){
+          $('.step-1').addClass('active');
+          $('.step-2').removeClass('active');
+        }
+        if (currentBarPercentage > "45"){
+          $('.step-2').addClass('active');
+        }
+        if (currentBarPercentage > "80"){
+          $('.step-2').addClass('active');
+          $('.step-3').addClass('active');
+        }
+      });
+      $("button").click(function(){
+        $("p").slideToggle();
+      });
   </script>
+  <script>
+    sendEvent = function(sel, step) {
+        var sel_event = new CustomEvent('next.m.' + step, {detail: {step: step}});
+        window.dispatchEvent(sel_event);
+    }
+    </script>
   <!-- build:js -->
   <script src="assets/js/app.js"></script>
   <!-- endbuild -->

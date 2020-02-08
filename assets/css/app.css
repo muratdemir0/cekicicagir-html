@@ -12296,3 +12296,381 @@ footer .foo-menu ul li a:hover {
   font-family: FontAwesome;
   color: #0a9ac9;
 }
+
+.m-progress-bar-wrapper {
+  background-color: #e7e7e7;
+}
+
+.m-progress-bar {
+  min-height: 6px;
+  background: #0a9ac9;
+  width: 5%;
+}
+
+.multi-step {
+  background-color: white;
+}
+
+.multi-step .modal-header {
+  display: block !important;
+  border: 0;
+}
+
+.multi-step .modal-content {
+  border: 0;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.multi-step .modal-content .btn-close {
+  position: absolute;
+  right: -45%;
+  top: -15px;
+  font-size: 30px;
+}
+
+.multi-step h1 {
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 26px;
+  color: #212121;
+  font-weight: 500;
+}
+
+.multi-step form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.multi-step .modal-body.step-2 .circle {
+  position: absolute;
+  bottom: 10px;
+}
+
+.multi-step .form-check {
+  width: calc(50% - 20px);
+  height: 125px;
+  margin: 10px;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0px 1px 5px rgba(33, 33, 33, 0.15);
+          box-shadow: 0px 1px 5px rgba(33, 33, 33, 0.15);
+  cursor: pointer;
+}
+
+.multi-step .form-check input {
+  width: 100%;
+  height: 100%;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.multi-step .form-check img {
+  width: 50px;
+  margin: 10px 0;
+}
+
+.multi-step .form-check .circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #BDBDBD;
+  position: relative;
+}
+
+.multi-step .form-check input[type="checkbox"]:checked {
+  border: 1px solid #0a9ac9;
+}
+
+.multi-step .form-check-input {
+  -webkit-box-shadow: 0px 1px 5px rgba(33, 33, 33, 0.15);
+          box-shadow: 0px 1px 5px rgba(33, 33, 33, 0.15);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.multi-step .form-check-input:checked {
+  -webkit-box-shadow: 0px 1px 15px rgba(33, 33, 33, 0.15);
+          box-shadow: 0px 1px 15px rgba(33, 33, 33, 0.15);
+}
+
+.multi-step .form-check-input:checked ~ label {
+  color: #0a9ac9;
+}
+
+.multi-step .form-check-input:checked ~ .circle {
+  border-color: #0a9ac9;
+}
+
+.multi-step .form-check-input:checked ~ .circle:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: #0a9ac9;
+  left: 3px;
+  top: 3px;
+}
+
+.multi-step .btn-back {
+  background-color: transparent !important;
+  margin-right: auto;
+  border: 0;
+  color: #0a9ac9 !important;
+}
+
+.multi-step .btn-forward {
+  color: #0a9ac9 !important;
+  background-color: transparent !important;
+  margin-left: auto;
+  border: 0;
+  text-transform: capitalize;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.multi-step .modal-footer {
+  -webkit-box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.15);
+  border: 0;
+}
+
+.multi-step .modal-footer button.step {
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.multi-step .modal-footer button.step .fa-angle-left {
+  font-size: 32px;
+  margin-right: 5px;
+}
+
+.multi-step .modal-footer button.step .fa-angle-right {
+  font-size: 32px;
+  margin-left: 5px;
+}
+
+.wizard-step-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wizard-step-name .modal-title {
+  display: block !important;
+  font-size: 12px;
+  width: 33.3%;
+  text-align: center;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.wizard-step-name .modal-title:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background-color: #e7e7e7;
+  color: white;
+  margin-top: 11px;
+  margin-left: -8px;
+}
+
+.wizard-step-name .modal-title.active {
+  color: #0a9ac9;
+}
+
+.wizard-step-name .modal-title.active:before {
+  background-color: #0a9ac9;
+}
+
+.wizard-step-name .modal-title:first-child:before {
+  content: "1";
+}
+
+.wizard-step-name .modal-title:nth-child(2):before {
+  content: "2";
+}
+
+.wizard-step-name .modal-title:last-child:before {
+  content: "3";
+}
+
+.list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.list-card-wrap {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 1px 5px rgba(33, 33, 33, 0.15);
+          box-shadow: 0px 1px 5px rgba(33, 33, 33, 0.15);
+  border-radius: 3px;
+  margin: 24px;
+  padding: 12px;
+  width: 50%;
+  margin: 12px;
+  padding: 12px;
+  width: calc(50% - 24px);
+}
+
+.list-card-wrap .list-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.list-card-wrap .img {
+  margin-right: 12px;
+}
+
+.list-card-wrap .img img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+
+.list-card-wrap .location,
+.list-card-wrap .times {
+  color: #BDBDBD;
+  margin: 2px 0;
+  font-size: 12px;
+}
+
+.list-card-wrap .detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.list-card-wrap .detail h5 {
+  font-size: 18px;
+}
+
+.list-card-wrap .list-card-footer {
+  border-top: 1px solid #F5F5F5;
+  padding: 8px 0 0;
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.list-card-wrap .list-card-footer span b {
+  font-size: 24px;
+}
+
+.list-card-wrap .list-card-footer a {
+  color: #22a7a7;
+  font-size: 26px;
+}
+
+.rating {
+  border: none;
+  float: left;
+  position: relative;
+  left: -45px;
+  top: -5px;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > label:before {
+  margin: 2px;
+  font-size: 16px;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label {
+  color: #ddd;
+  float: right;
+  margin: 0;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #22a7a7;
+}
+
+/* hover previous stars in list */
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {
+  color: #22a7a7;
+}
+
+.list-page {
+  margin-top: 100px;
+}
+
+.list-page h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 20px;
+  color: #212121;
+  margin: 16px 12px;
+}
+
+.list-page h2 span {
+  font-size: 16px;
+}
+
+.pac-container {
+  z-index: 100000;
+}

@@ -1383,3 +1383,310 @@ footer {
     }
   }
 }
+.m-progress-bar-wrapper{
+  background-color: $light;
+}
+.m-progress-bar {
+  min-height: 6px;
+  background: $blue;
+  width: 5%;
+}
+
+.multi-step{
+  background-color: white;
+  .modal-header{
+    display: block!important;
+    border:0;
+  }
+  .modal-content{
+    border: 0;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    .btn-close{
+      position: absolute;
+      right: -45%;
+      top: -15px;
+      font-size: 30px;
+    }
+  }
+  h1{
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 26px;
+    color: #212121;
+    font-weight: 500;
+  }
+  form{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .modal-body{
+    &.step-2{
+      .circle{
+        position: absolute;
+        bottom: 10px;
+      }
+    }
+  }
+  .form-check{
+    width: calc(50% - 20px);
+    height: 125px;
+    margin: 10px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 1px 5px rgba(33, 33, 33, 0.15);
+    cursor: pointer;
+    input{
+      width: 100%;
+      height: 100%;
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    img{
+      width: 50px;
+      margin: 10px 0;
+    }
+    .circle{
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid #BDBDBD;
+      position: relative;
+    }
+    input[type="checkbox"]:checked{
+      border: 1px solid $blue;
+    }
+  }
+  .form-check-input{
+    box-shadow: 0px 1px 5px rgba(33, 33, 33, 0.15);
+    box-shadow: none;
+    outline: none;
+    transition: all .3s ease;
+    cursor: pointer;
+    &:checked{
+      box-shadow: 0px 1px 15px rgba(33, 33, 33, 0.15);
+      ~label{
+        color: $blue;
+      }
+      ~.circle{
+        border-color: $blue;
+        &:before{
+          content: "";
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          border-radius: 100%;
+          background-color: $blue;
+          left: 3px;
+          top: 3px;
+        }
+      }
+    }
+  }
+  .btn-back{
+    background-color: transparent!important;
+    margin-right: auto;
+    border: 0;
+    color: $blue!important;
+  }
+  .btn-forward{
+    color: $blue!important;
+    background-color: transparent!important;
+    margin-left: auto;
+    border: 0;
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 1rem;
+  }
+  .modal-footer{
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.15);
+    border: 0;
+    button{
+      &.step{
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        .fa-angle-left{
+          font-size: 32px;
+          margin-right: 5px;
+        }
+        .fa-angle-right{
+          font-size: 32px;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+.wizard-step-name{
+  display: flex;
+
+  .modal-title{
+    display: block !important;
+    font-size: 12px;
+    width: 33.3%;
+    text-align: center;
+    position: relative;
+    margin-bottom: 12px;
+    &:before{
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      border-radius: 100%;
+      background-color: #e7e7e7;
+      color: white;
+      margin-top: 11px;
+      margin-left: -8px;
+    }
+    &.active{
+      color: $blue;
+      &:before{
+        background-color: $blue;
+      }
+    }
+    &:first-child{
+      &:before{
+        content: "1";
+      }
+    }
+    &:nth-child(2){
+      &:before{
+        content: "2";
+      }
+    }
+    &:last-child{
+      &:before{
+        content: "3";
+      }
+    }
+  }
+}
+.list{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-card-wrap{
+  background: #FFFFFF;
+  box-shadow: 0px 1px 5px rgba(33, 33, 33, 0.15);
+  border-radius: 3px;
+  margin: 24px;
+  padding: 12px;
+  width: 50%;
+  margin: 12px;
+  padding: 12px;
+  width: calc(50% - 24px);
+    .list-card{
+      display: flex;
+      width: 100%;
+    }
+  .img{
+    margin-right: 12px;
+    img{
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+    }
+  }
+  .location,
+  .times{
+    color: #BDBDBD;
+    margin: 2px 0;
+    font-size: 12px;
+  }
+  .detail{
+    display: flex;
+    flex-direction: column;
+    h5{
+      font-size: 18px;
+    }
+  }
+  .list-card-footer{
+    border-top: 1px solid #F5F5F5;
+    padding: 8px 0 0;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    span{
+      b{
+        font-size: 24px;
+      }
+    }
+    a{
+      color: $green;
+      font-size: 26px;
+    }
+  }
+}
+
+
+.rating {
+  border: none;
+  float: left;
+  position: relative;
+  left: -45px;
+  top: -5px;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+  margin: 2px;
+  font-size: 16px;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label {
+  color: #ddd;
+ float: right;
+ margin: 0;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: $green;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: $green;  }
+
+.list-page{
+  margin-top: 100px;
+  h2{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    color: #212121;
+    margin: 16px 12px;
+    span{
+      font-size: 16px;;
+    }
+  }
+}
+.pac-container {
+  background-color: #FFF;
+  z-index: 20;
+  position: fixed;
+  display: inline-block;
+  float: left;
+}
+.multi-step{
+  z-index: 20;
+}
+.multi-step .modal-backdrop{
+  z-index: 10;
+}​
