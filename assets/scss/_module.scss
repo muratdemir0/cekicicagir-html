@@ -1684,9 +1684,16 @@ footer {
   display: inline-block;
   float: left;
 }
-.multi-step{
-  z-index: 20;
-}
 .multi-step .modal-backdrop{
   z-index: 10;
 }​
+.input-with-button{
+  display: flex;
+  button{
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}
+.btn-sm{
+  font-size: 12px;
+}

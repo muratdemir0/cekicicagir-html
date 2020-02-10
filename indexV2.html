@@ -560,10 +560,13 @@
             <div class="modal-body step-1" data-step="1">
                 <h1>Nerede Kaldın?</h1>
                 <div class="form-group">
-                  <label>Location:</label>
-                  <input type="text" class="form-control" id="search_input" placeholder="Type address..." />
-                  <input type="hidden" id="loc_lat" />
-                  <input type="hidden" id="loc_long" />
+                  <div class="d-flex">
+                    <input type="text" class="form-control" id="search_input" placeholder="Adresinizi Arayın..." />
+                    <input type="hidden" id="loc_lat" />
+                    <input type="hidden" id="loc_long" />
+                    <button class="btn btn-primary btn-sm" type="button" onclick="getLocation()">Konumumu Bul</button>
+                  </div>
+                  <p id="findMyPlace"></p>
               </div>
             </div>
             <div class="modal-body step-2" data-step="2">
@@ -682,13 +685,44 @@
       $("button").click(function(){
         $("p").slideToggle();
       });
-  </script>
-  <script>
-    sendEvent = function(sel, step) {
+      //
+      sendEvent = function(sel, step) {
         var sel_event = new CustomEvent('next.m.' + step, {detail: {step: step}});
         window.dispatchEvent(sel_event);
     }
-    </script>
+    //
+      var x = document.getElementById("findMyPlace");
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+
+      function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+      }
+
+      function showError(error) {
+        switch(error.code) {
+          case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+          case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+          case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+          case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+        }
+      }
+  </script>
   <!-- build:js -->
   <script src="assets/js/app.js"></script>
   <!-- endbuild -->

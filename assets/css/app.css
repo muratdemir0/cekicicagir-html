@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -12672,5 +12673,28 @@ footer .foo-menu ul li a:hover {
 }
 
 .pac-container {
-  z-index: 100000;
+  background-color: #FFF;
+  z-index: 20;
+  position: fixed;
+  display: inline-block;
+  float: left;
+}
+
+.multi-step .modal-backdrop {
+  z-index: 10;
+}
+
+​ .input-with-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+​ .input-with-button button {
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.btn-sm, .btn-group-sm > .btn {
+  font-size: 12px;
 }
