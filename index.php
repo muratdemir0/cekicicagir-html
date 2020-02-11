@@ -1,1 +1,1 @@
-<?php header( 'Location: dist/indexV2.html' );
+<?php header( 'Location: indexV2.html' );
