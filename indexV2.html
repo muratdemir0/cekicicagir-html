@@ -18,7 +18,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 
   <!-- Icons for this template -->
-  <link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://use.fontawesome.com/2fc667f870.js"></script>
   <!-- Stylesheet -->
   <!-- build:css -->
   <link href="assets/css/app.css" rel="stylesheet" />
@@ -556,15 +556,19 @@
     <div class="modal-dialog">
         <div class="modal-content">
           <button type="button" class="btn btn-default btn-close" data-dismiss="modal">X</button>
-
             <div class="modal-body step-1" data-step="1">
                 <h1>Nerede Kaldın?</h1>
                 <div class="form-group">
                   <div class="d-flex">
-                    <input type="text" class="form-control" id="search_input" placeholder="Adresinizi Arayın..." />
+                    <div class="img-pin">
+                      <i class="fa fa-map-marker color-blue"></i>
+                    </div>
+                    <input type="text" class="form-control" id="search_input" placeholder="Bulunduğunuz yeri girin" />
                     <input type="hidden" id="loc_lat" />
                     <input type="hidden" id="loc_long" />
-                    <button class="btn btn-primary btn-sm" type="button" onclick="getLocation()">Konumumu Bul</button>
+                    <button class="btn btn-primary btn-border btn-sm" type="button" onclick="getLocation()">
+                      <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                    </button>
                   </div>
                   <p id="findMyPlace"></p>
               </div>
@@ -572,15 +576,17 @@
             <div class="modal-body step-2" data-step="2">
                 <h1>Aracınız hareket eder durumda mı?</h1>
                 <form action="#">
-                  <div class="form-check">
-                    <input type="radio" name="yesOrNo" class="form-check-input" id="yesCheck">
-                    <label class="form-check-label" for="yesCheck">Evet</label>
-                    <span class="circle"></span>
-                  </div>
-                  <div class="form-check">
-                    <input type="radio" name="yesOrNo" class="form-check-input" id="noCheck">
-                    <label class="form-check-label" for="noCheck">Hayır</label>
-                    <span class="circle"></span>
+                  <div class="d-flex">
+                    <div class="form-check">
+                      <input type="radio" name="yesOrNo" class="form-check-input" id="yesCheck">
+                      <label class="form-check-label" for="yesCheck">Evet</label>
+                      <span class="circle"></span>
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" name="yesOrNo" class="form-check-input" id="noCheck">
+                      <label class="form-check-label" for="noCheck">Hayır</label>
+                      <span class="circle"></span>
+                    </div>
                   </div>
                 </form>
             </div>
@@ -634,6 +640,7 @@
                 <button type="button" class="btn btn-primary step step-1 btn-forward" data-step="1" onclick="sendEvent('#finderModal', 2)">Devam<i class="fa fa-angle-right"></i> </button>
                 <button type="button" class="btn btn-secondary step step-3 btn-back" data-step="3" onclick="sendEvent('#finderModal', 2)"><i class="fa fa-angle-left"></i> Önceki</button>
                 <button type="button" class="btn btn-primary step step-2 btn-forward" data-step="2" onclick="sendEvent('#finderModal', 3)">Devam<i class="fa fa-angle-right"></i> </button>
+                <button type="button" class="btn btn-primary step step-3 btn-forward" data-step="3" onclick="">Fiyatları Gör<i class="fa fa-angle-right"></i> </button>
             </div>
         </div>
     </div>
@@ -653,7 +660,6 @@
         autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
             types: ['geocode'],
         });
-
         google.maps.event.addListener(autocomplete, 'place_changed', function () {
             var near_place = autocomplete.getPlace();
             document.getElementById('loc_lat').value = near_place.geometry.location.lat();
@@ -664,8 +670,8 @@
         });
         var input = document.getElementById("search_input");
         var autocomplete = new google.maps.places.Autocomplete(input);
-
     });
+
     $('.select2').select2();
       var currentBarPercentage = $('.m-progress-bar')[0].style.width;
       $(".btn.step").click(function(e) {
@@ -692,7 +698,6 @@
     }
     //
       var x = document.getElementById("findMyPlace");
-
       function getLocation() {
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(showPosition, showError);

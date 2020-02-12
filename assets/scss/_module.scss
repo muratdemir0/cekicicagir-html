@@ -29,7 +29,6 @@
     border-radius: 50% 50% 50% 50% / 40% 20% 75% 30%;
   }
 
-
   img {
     margin-right: 12px;
   }
@@ -43,7 +42,9 @@
     }
   }
 }
-
+.color-blue{
+  color: $blue;
+}
 .btn-primary {
   background-color: $blue;
   font-weight: 600;
@@ -51,7 +52,7 @@
   text-transform: uppercase;
   border-color: $blue;
   border-radius: 3px;
-
+  transition: all .3s ease;
   .icon {
     display: inline-block;
     margin-right: 5px;
@@ -60,13 +61,25 @@
   &:hover {
     background-color: darken($blue, 10);
   }
+  &.btn-border{
+    background-color: transparent;
+    color: $blue;
+    img{
+      width: 16px;
+    }
+    &:hover{
+      background-color: $blue;
+      color: white;
+    }
+  }
 }
 
 //Form Elements
 .form-control {
   height: 45px;
-  background-color: $highlight;
   border-radius: 3px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
   -webkit-appearance: none;
   border-color: transparent;
 }
@@ -1394,6 +1407,9 @@ footer {
 
 .multi-step{
   background-color: white;
+  .modal-dialog{
+    height: calc(100% - 3.5rem);
+  }
   .modal-header{
     display: block!important;
     border:0;
@@ -1401,11 +1417,16 @@ footer {
   .modal-content{
     border: 0;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    height: 100%;
     .btn-close{
       position: absolute;
       right: -45%;
       top: -15px;
       font-size: 30px;
+      z-index: 20;
+      @include lg{
+        right: 0;
+      }
     }
   }
   h1{
@@ -1414,6 +1435,9 @@ footer {
     margin-bottom: 26px;
     color: #212121;
     font-weight: 500;
+    @include lg{
+      margin-top: 26px;
+    }
   }
   form{
     display: flex;
@@ -1425,6 +1449,11 @@ footer {
         position: absolute;
         bottom: 10px;
       }
+    }
+    .img-pin{
+      width: 32px;
+      display: flex;
+      align-items: center;
     }
   }
   .form-check{
@@ -1518,6 +1547,11 @@ footer {
         }
       }
     }
+  }
+  .btn-border{
+    width: 50px;
+    font-size: 20px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
   }
 }
 .wizard-step-name{
@@ -1677,12 +1711,9 @@ footer {
     }
   }
 }
-.pac-container {
-  background-color: #FFF;
-  z-index: 20;
-  position: fixed;
-  display: inline-block;
-  float: left;
+div.pac-container {
+  z-index: 99999999999 !important;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15)!important;
 }
 .multi-step .modal-backdrop{
   z-index: 10;
@@ -1696,4 +1727,5 @@ footer {
 }
 .btn-sm{
   font-size: 12px;
+  white-space: nowrap;
 }

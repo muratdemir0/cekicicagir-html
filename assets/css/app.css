@@ -10823,6 +10823,10 @@ main .jumbotron .btn-primary {
   }
 }
 
+.color-blue {
+  color: #0a9ac9;
+}
+
 .btn-primary {
   background-color: #0a9ac9;
   font-weight: 600;
@@ -10830,6 +10834,8 @@ main .jumbotron .btn-primary {
   text-transform: uppercase;
   border-color: #0a9ac9;
   border-radius: 3px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .btn-primary .icon {
@@ -10841,10 +10847,26 @@ main .jumbotron .btn-primary {
   background-color: #087598;
 }
 
+.btn-primary.btn-border {
+  background-color: transparent;
+  color: #0a9ac9;
+}
+
+.btn-primary.btn-border img {
+  width: 16px;
+}
+
+.btn-primary.btn-border:hover {
+  background-color: #0a9ac9;
+  color: white;
+}
+
 .form-control {
   height: 45px;
-  background-color: #f5f5f5;
   border-radius: 3px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
   -webkit-appearance: none;
   border-color: transparent;
 }
@@ -12312,6 +12334,10 @@ footer .foo-menu ul li a:hover {
   background-color: white;
 }
 
+.multi-step .modal-dialog {
+  height: calc(100% - 3.5rem);
+}
+
 .multi-step .modal-header {
   display: block !important;
   border: 0;
@@ -12321,6 +12347,7 @@ footer .foo-menu ul li a:hover {
   border: 0;
   -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+  height: 100%;
 }
 
 .multi-step .modal-content .btn-close {
@@ -12328,6 +12355,13 @@ footer .foo-menu ul li a:hover {
   right: -45%;
   top: -15px;
   font-size: 30px;
+  z-index: 20;
+}
+
+@media (max-width: 992px) {
+  .multi-step .modal-content .btn-close {
+    right: 0;
+  }
 }
 
 .multi-step h1 {
@@ -12336,6 +12370,12 @@ footer .foo-menu ul li a:hover {
   margin-bottom: 26px;
   color: #212121;
   font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  .multi-step h1 {
+    margin-top: 26px;
+  }
 }
 
 .multi-step form {
@@ -12349,6 +12389,16 @@ footer .foo-menu ul li a:hover {
 .multi-step .modal-body.step-2 .circle {
   position: absolute;
   bottom: 10px;
+}
+
+.multi-step .modal-body .img-pin {
+  width: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .multi-step .form-check {
@@ -12474,6 +12524,13 @@ footer .foo-menu ul li a:hover {
 .multi-step .modal-footer button.step .fa-angle-right {
   font-size: 32px;
   margin-left: 5px;
+}
+
+.multi-step .btn-border {
+  width: 50px;
+  font-size: 20px;
+  -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
 }
 
 .wizard-step-name {
@@ -12672,12 +12729,10 @@ footer .foo-menu ul li a:hover {
   font-size: 16px;
 }
 
-.pac-container {
-  background-color: #FFF;
-  z-index: 20;
-  position: fixed;
-  display: inline-block;
-  float: left;
+div.pac-container {
+  z-index: 99999999999 !important;
+  -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15) !important;
+          box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15) !important;
 }
 
 .multi-step .modal-backdrop {
@@ -12697,4 +12752,5 @@ footer .foo-menu ul li a:hover {
 
 .btn-sm, .btn-group-sm > .btn {
   font-size: 12px;
+  white-space: nowrap;
 }
