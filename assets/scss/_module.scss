@@ -1429,6 +1429,9 @@ footer {
       }
     }
   }
+  .fa-circle{
+    font-size: 10px;
+  }
   h1{
     font-size: 34px;
     text-align: center;
@@ -1552,6 +1555,11 @@ footer {
     width: 50px;
     font-size: 20px;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+  }
+}
+.form-group{
+  h5{
+    color: #BDBDBD;
   }
 }
 .wizard-step-name{
@@ -1729,3 +1737,7 @@ div.pac-container {
   font-size: 12px;
   white-space: nowrap;
 }
+.small-text{
+  font-size: 85%;
+}
+

@@ -12364,6 +12364,10 @@ footer .foo-menu ul li a:hover {
   }
 }
 
+.multi-step .fa-circle {
+  font-size: 10px;
+}
+
 .multi-step h1 {
   font-size: 34px;
   text-align: center;
@@ -12531,6 +12535,10 @@ footer .foo-menu ul li a:hover {
   font-size: 20px;
   -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+.form-group h5 {
+  color: #BDBDBD;
 }
 
 .wizard-step-name {
@@ -12753,4 +12761,8 @@ div.pac-container {
 .btn-sm, .btn-group-sm > .btn {
   font-size: 12px;
   white-space: nowrap;
+}
+
+.small-text {
+  font-size: 85%;
 }
